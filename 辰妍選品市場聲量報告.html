@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辰妍生活選品｜市場聲量調查報告 v3</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f7f4f0; color:#2d2d2d; }
+
+/* ── Update banner ── */
+.update-bar {
+  background:#2d2d2d; color:#e8c9a0;
+  text-align:center; padding:7px 16px;
+  font-size:0.75rem; letter-spacing:0.5px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.update-bar .dot { width:7px;height:7px;border-radius:50%;background:#4caf50;display:inline-block;animation:pulse 2s infinite; }
+@keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.4} }
+
+/* ── Header ── */
+header {
+  background:linear-gradient(135deg,#7a5248 0%,#c4856e 55%,#e8a88e 100%);
+  color:white; padding:28px 24px 24px; text-align:center;
+}
+header h1 { font-size:1.6rem; font-weight:800; letter-spacing:2px; }
+header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
+.pbadges { display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:13px; }
+.pbadge {
+  background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.4);
+  border-radius:20px; padding:3px 12px; font-size:.72rem; font-weight:600;
+}
+
+/* ── Tabs ── */
+.tabwrap { background:white; border-bottom:1px solid #ede8e3; }
+.tab-bar { display:flex; max-width:1200px; margin:0 auto; padding:0 24px; }
+.tab-btn {
+  padding:13px 22px; border:none; background:none;
+  font-size:.88rem; font-weight:700; color:#aaa; cursor:pointer;
+  border-bottom:3px solid transparent; margin-bottom:-1px;
+  transition:all .2s; white-space:nowrap;
+}
+.tab-btn:hover { color:#c4856e; }
+.tab-btn.active { color:#7a5248; border-bottom-color:#c4856e; }
+
+/* ── Search ── */
+.searchwrap { background:white; padding:10px 24px 14px; border-bottom:1px solid #ede8e3; }
+.searchwrap input {
+  max-width:700px; display:block; margin:0 auto;
+  width:100%; padding:9px 16px;
+  border:2px solid #e0d5cc; border-radius:24px;
+  font-size:.88rem; outline:none; background:#faf8f5;
+  transition:border-color .2s;
+}
+.searchwrap input:focus { border-color:#c4856e; background:white; }
+
+/* ── Body ── */
+.page-body { max-width:1200px; margin:0 auto; padding:0 24px 48px; }
+
+/* ── Scenario header ── */
+.scenario-section { margin-top:28px; }
+.scenario-section.hidden { display:none; }
+.scene-hdr {
+  display:flex; align-items:center; gap:14px;
+  padding:16px 22px; border-radius:16px; margin-bottom:16px;
+}
+.scene-sleep .scene-hdr { background:linear-gradient(135deg,#ecddf8,#f8eee8); }
+.scene-poop  .scene-hdr { background:linear-gradient(135deg,#d2f0db,#eef8e4); }
+.scene-icon {
+  width:50px;height:50px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;
+}
+.scene-sleep .scene-icon { background:#d4a0e8; }
+.scene-poop  .scene-icon { background:#74c48a; }
+.scene-text h2 { font-size:1.2rem; font-weight:800; }
+.scene-sleep .scene-text h2 { color:#6a3d8a; }
+.scene-poop  .scene-text h2 { color:#2d6e3e; }
+.scene-text p { font-size:.78rem; margin-top:2px; }
+.scene-sleep .scene-text p { color:#8a5ea8; }
+.scene-poop  .scene-text p { color:#4a8a5e; }
+.scene-count {
+  margin-left:auto; padding:4px 14px; border-radius:20px;
+  font-size:.75rem; font-weight:700; color:white;
+}
+.scene-sleep .scene-count { background:#c48ad8; }
+.scene-poop  .scene-count { background:#5ab870; }
+
+/* ── Card grid ── */
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; }
+
+.card {
+  background:white; border-radius:16px; overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,.06); border:1.5px solid #f0ebe6;
+  display:flex; flex-direction:column;
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(0,0,0,.11); }
+.card.hidden { display:none; }
+
+/* Card header */
+.card-hdr {
+  padding:15px 17px 11px; border-bottom:1px solid #f5f0ec;
+  display:flex; align-items:flex-start; gap:11px; position:relative;
+}
+.rank-badge {
+  position:absolute; top:11px; right:11px;
+  width:26px;height:26px;border-radius:50%;
+  background:#f0e8e4;color:#8b5e52;
+  font-size:.68rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.eicon {
+  width:46px;height:46px;border-radius:11px;background:#fdf3ee;
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;
+}
+.cbrand { font-size:.68rem;color:#c4856e;font-weight:700;letter-spacing:.3px; }
+.cname  { font-size:.9rem;font-weight:700;margin-top:3px;line-height:1.35;padding-right:28px; }
+
+/* Social platform pills */
+.prow { display:flex;flex-wrap:wrap;gap:5px;padding:9px 17px 0; }
+.pp { font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:7px; }
+.ptt   { background:#e8f4e8;color:#2e6e2e; }
+.dcard { background:#e4ecf8;color:#2c52a0; }
+.mommy { background:#fce8fc;color:#8a308a; }
+.ig    { background:#fde8e8;color:#b03030; }
+.thread{ background:#fff0e0;color:#a05000; }
+
+/* ════ E-COMMERCE RATING ROW ════ */
+.ecom-section {
+  margin:10px 17px 0;
+  background:#faf4f0;border-radius:10px;padding:10px 12px;
+}
+.ecom-title { font-size:.65rem;font-weight:800;color:#8b5e52;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px; }
+.ecom-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:6px; }
+.ecom-item {
+  background:white;border-radius:8px;padding:6px 8px;
+  border:1px solid #f0ebe6;text-align:center;
+}
+.ecom-label { font-size:.62rem;color:#aaa;font-weight:700;margin-bottom:3px; }
+.ecom-stars { font-size:.78rem;color:#f5a623;line-height:1; }
+.ecom-score { font-size:.82rem;font-weight:800;color:#2d2d2d; }
+.ecom-reviews { font-size:.6rem;color:#bbb;margin-top:1px; }
+.verified { display:inline-block;background:#e8f5e8;color:#2e7d32;font-size:.55rem;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:3px; }
+
+/* ════ TOTAL VOICE SCORE ════ */
+.voice-score-section {
+  margin:10px 17px 0;
+  display:flex;align-items:center;gap:10px;
+}
+.voice-label-text { font-size:.68rem;font-weight:700;color:#8b5e52;white-space:nowrap; }
+.voice-bar-wrap { flex:1; }
+.voice-bg { background:#f0e8e4;border-radius:8px;height:10px;overflow:hidden; }
+.voice-fill {
+  height:100%;border-radius:8px;
+  background:linear-gradient(90deg,#c4856e,#e8b89e);
+  transition:width 1.2s ease;
+}
+.voice-pct { font-size:.9rem;font-weight:800;color:#7a5248;min-width:38px;text-align:right; }
+.voice-grade {
+  font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:8px;white-space:nowrap;
+}
+.grade-s  { background:#ffe082;color:#7a4f00; }
+.grade-a  { background:#c8e6c9;color:#1b5e20; }
+.grade-b  { background:#bbdefb;color:#0d47a1; }
+.grade-c  { background:#f5f5f5;color:#757575; }
+
+/* Buzz */
+.buzz { padding:9px 17px 0;font-size:.78rem;color:#666;line-height:1.6; }
+
+/* Pros / Cons */
+.pros-cons { display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:11px 17px;flex:1; }
+.pro-box { background:#edf7ed;border-radius:9px;padding:8px 10px; }
+.con-box { background:#fdf0f0;border-radius:9px;padding:8px 10px; }
+.pc-t { font-size:.66rem;font-weight:800;margin-bottom:4px; }
+.pro-box .pc-t { color:#1b6e1b; }
+.con-box .pc-t { color:#b02020; }
+.pc-list { list-style:none; }
+.pc-list li { font-size:.73rem;color:#444;line-height:1.5;padding:1px 0;border-bottom:1px dashed rgba(0,0,0,.05); }
+.pc-list li:last-child { border-bottom:none; }
+.pro-box .pc-list li::before { content:'✓ ';color:#2e7d32; }
+.con-box .pc-list li::before { content:'✗ ';color:#c62828; }
+
+/* Verdict */
+.verdict { margin:0 17px 9px;padding:7px 10px;border-radius:8px;font-size:.74rem;font-weight:600;line-height:1.5; }
+.verdict.positive { background:#e8f5e8;color:#1b5e20;border-left:3px solid #43a047; }
+.verdict.mixed    { background:#fffde7;color:#6a4f00;border-left:3px solid #f9a825; }
+.verdict.caution  { background:#fce4ec;color:#880e4f;border-left:3px solid #e91e63; }
+
+/* Link */
+.card-link {
+  display:block;text-align:center;padding:9px;
+  border-top:1px solid #f0ebe6;color:#8b5e52;
+  font-size:.75rem;font-weight:700;text-decoration:none;
+  background:#faf5f2;transition:background .18s;
+}
+.card-link:hover { background:#f0e5dc; }
+
+/* Empty */
+.empty { text-align:center;padding:60px;color:#bbb;font-size:.9rem; }
+
+/* Footnote */
+.footnote {
+  max-width:1200px;margin:0 auto 8px;padding:0 24px;
+  font-size:.7rem;color:#bbb;line-height:1.6;
+}
+
+footer {
+  text-align:center;padding:18px;font-size:.7rem;color:#bbb;
+  border-top:1px solid #eee;background:white;
+}
+
+/* Star render helper */
+.s5{color:#f5a623;} .sg{color:#ddd;}
+</style>
+</head>
+<body>
+
+<!-- ── Update bar ── -->
+<div class="update-bar">
+  <span class="dot"></span>
+  最新更新日期：<strong>2026年6月24日</strong>　｜　資料庫版本 v4　｜　情境主題：孕期好眠 / 炸屎危機
+</div>
+
+<header>
+  <h1>辰妍生活選品｜市場聲量調查報告</h1>
+  <p>12 件商品 · 跨平台社群 + 電商評分 + 部落格聲量全彙整</p>
+  <div class="pbadges">
+    <span class="pbadge">PTT BabyMother</span>
+    <span class="pbadge">Dcard 親子版</span>
+    <span class="pbadge">媽咪愛論壇</span>
+    <span class="pbadge">momo購物網</span>
+    <span class="pbadge">蝦皮購物</span>
+    <span class="pbadge">IG / Threads</span>
+    <span class="pbadge">部落格 / 媒體</span>
+  </div>
+</header>
+
+<!-- ── Tabs ── -->
+<div class="tabwrap">
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('all',this)">🗂 全部商品（12）</button>
+    <button class="tab-btn" onclick="switchTab('sleep',this)">🌙 孕期好眠（5）</button>
+    <button class="tab-btn" onclick="switchTab('poop',this)">💩 炸屎危機（7）</button>
+  </div>
+</div>
+
+<!-- ── Search ── -->
+<div class="searchwrap">
+  <input type="text" id="si" placeholder="🔍 搜尋商品名稱或品牌…" oninput="onSearch()">
+</div>
+
+<div class="page-body">
+
+<!-- ════════════════ 孕期好眠 ════════════════ -->
+<div class="scenario-section scene-sleep" id="sec-sleep">
+  <div class="scene-hdr">
+    <div class="scene-icon">🌙</div>
+    <div class="scene-text">
+      <h2>孕期好眠</h2>
+      <p>孕婦舒適 · 妊娠護理 · 產前準備</p>
+    </div>
+    <span class="scene-count">5 件商品</span>
+  </div>
+  <div class="grid" id="g-sleep">
+
+    <!-- S1 doomoo 月亮枕 -->
+    <div class="card" data-scene="sleep" data-kw="doomoo 月亮枕 比利時 孕婦枕 哺乳枕">
+      <div class="card-hdr">
+        <div class="eicon">🌙</div>
+        <div><div class="cbrand">比利時 doomoo</div><div class="cname">多功能哺乳孕婦月亮枕</div></div>
+        <div class="rank-badge">S1</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span>
+        <span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">50+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.7</div>
+            <div class="ecom-reviews">100+ 件售出</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">安琪兒</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">官方代理通路</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="88%"></div></div></div>
+        <div class="voice-pct">88%</div>
+        <span class="voice-grade grade-s">S級</span>
+      </div>
+      <div class="buzz">PTT 年度必推孕婦枕，Dcard 評比常名列前茅，部落格開箱文超過 15 篇。「用兩年不塌」是社群高頻評語。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>有機棉枕套，安心材質</li><li>形狀易調整，可塑U/C型</li>
+          <li>支撐力強，軟而有形</li><li>哺乳側睡兩用</li><li>momo/蝦皮均有穩定評分</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>換套時填充小球易漏出</li><li>3個月後易下塌需補充顆粒</li>
+          <li>售價偏高（約$2,800+）</li><li>體積大收納不易</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：PTT/Dcard 長期口碑品，電商評分穩定 4.8+，支撐力是最強賣點。</div>
+      <a href="https://www.angelbaby.com.tw/products/1800050400036-1" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- S2 香草集 -->
+    <div class="card" data-scene="sleep" data-kw="香草集 justherb 無咖啡因飲 花草茶 孕婦">
+      <div class="card-hdr">
+        <div class="eicon">🌿</div>
+        <div><div class="cbrand">香草集 JustHerb</div><div class="cname">無咖啡因蔓越莓複方飲</div></div>
+        <div class="rank-badge">S2</div>
+      </div>
+      <div class="prow">
+        <span class="pp ig">IG</span><span class="pp thread">Threads</span><span class="pp dcard">Dcard</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">官網</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.5</div>
+            <div class="ecom-reviews">官網直售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">PChome</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.4</div>
+            <div class="ecom-reviews">20+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">媒體/部落格</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">5 篇以下</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="42%"></div></div></div>
+        <div class="voice-pct">42%</div>
+        <span class="voice-grade grade-c">C級</span>
+      </div>
+      <div class="buzz">IG 媽媽生活圈有視覺曝光，但育兒論壇討論量偏低。精品保養品牌定位，口碑仍在累積階段。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>完全無咖啡因，孕期安心</li><li>天然草本、無添加色素</li>
+          <li>SGS 食安檢驗合格</li><li>包裝質感佳，IG打卡效果好</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>社群討論量偏低</li><li>單價偏高</li>
+          <li>口味選擇有限</li><li>媽媽論壇能見度不足</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 社群總評：IG 質感強但媽媽社群聲量薄弱，需加強育兒平台曝光。</div>
+      <a href="https://www.justherb.com.tw/products/cranberryn" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- S3 媽咪莉娜 -->
+    <div class="card" data-scene="sleep" data-kw="媽咪莉娜 maternea 無痕美體霜 妊娠霜 撫紋霜">
+      <div class="card-hdr">
+        <div class="eicon">🤰</div>
+        <div><div class="cbrand">媽咪莉娜 Maternea</div><div class="cname">無痕美體霜（妊娠霜 / 撫紋霜）</div></div>
+        <div class="rank-badge">S3</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp ig">IG</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.7</div>
+            <div class="ecom-reviews">30+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">安琪兒</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">官方代理銷售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">10 篇開箱文</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="63%"></div></div></div>
+        <div class="voice-pct">63%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 妊娠霜比較串常被提及，「無香精、CP值高」是主要推薦理由。歐洲進口背書，96% 用戶臨床撫紋有感。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>歐洲進口、無香精低敏</li><li>含專利 Regestril™ 成分</li>
+          <li>刺激膠原蛋白再生</li><li>擦後不油不黏，吸收佳</li><li>安琪兒正品代理</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>質地較厚重，需搭配按摩油</li><li>滋潤度中等，乾肌需加強</li>
+          <li>PTT 討論量比慕之恬廊少</li><li>售價偏高（$1,000+）</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：PTT 妊娠霜比較文中以無香精 CP 值獲肯定，電商評分穩定 4.7+。</div>
+      <a href="https://www.angelbaby.com.tw/products/2700090700013-17" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- S4 阿嬤的配方 -->
+    <div class="card" data-scene="sleep" data-kw="阿嬤的配方 精油按摩乳 腿部 水腫 孕婦">
+      <div class="card-hdr">
+        <div class="eicon">💆</div>
+        <div><div class="cbrand">阿嬤的配方 DR.GRANDMA</div><div class="cname">漫步放鬆精油按摩乳</div></div>
+        <div class="rank-badge">S4</div>
+      </div>
+      <div class="prow">
+        <span class="pp dcard">Dcard</span><span class="pp ig">IG</span><span class="pp ptt">PTT</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.6</div>
+            <div class="ecom-reviews">20+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">康是美</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.5</div>
+            <div class="ecom-reviews">實體通路有售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">12 篇開箱文</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="52%"></div></div></div>
+        <div class="voice-pct">52%</div>
+        <span class="voice-grade grade-c">C級</span>
+      </div>
+      <div class="buzz">足貼系列在 PTT/Dcard 有高聲量，按摩乳以部落客口碑為主。附按摩頭是差異化設計，孕期水腫族群有正面回饋。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>附可調節按摩頭，操作便利</li><li>含紅豆薏仁+絲柏精油</li>
+          <li>水腫/痠痛舒緩效果受肯定</li><li>部落客評價穩定正面</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>孕婦使用精油成分需確認</li><li>香味較濃，敏感體質需試用</li>
+          <li>按摩乳社群討論量低於足貼</li><li>效果因體質差異大</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 社群總評：品牌大眾信賴，但按摩乳系列聲量以部落格為主，論壇能見度待加強。</div>
+      <a href="https://www.grandmatherapy.com/products/liftslight" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- S5 nac nac 待產包 -->
+    <div class="card" data-scene="sleep" data-kw="nac nac 袋來好孕待產包 孕婦 生產">
+      <div class="card-hdr">
+        <div class="eicon">🎒</div>
+        <div><div class="cbrand">nac nac</div><div class="cname">袋來好孕待產包</div></div>
+        <div class="rank-badge">S5</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">60+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">媽咪愛</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">80+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">20+ 篇開箱</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="80%"></div></div></div>
+        <div class="voice-pct">80%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">PTT 婦幼展討論必提品，媽咪愛 80+ 則評論，部落格開箱超過 20 篇。「CP 值最高待產包」是最常見標題關鍵字。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>品項齊全，自然/剖腹均適用</li><li>五款待產包中CP值最高</li>
+          <li>附折疊袋可轉型媽媽包</li><li>出貨快品質穩定</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>產褥墊評價不佳</li><li>附贈提袋偏小偏軟</li>
+          <li>無客製化組合選項</li><li>部分附件品質略遜競品</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：電商評分穩定 4.8-4.9，PTT/媽咪愛雙平台強力推薦，CP 值王者。</div>
+      <a href="https://www.nacnac.com.tw/zh-TW/products/2540431600082" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+  </div><!-- /g-sleep -->
+</div><!-- /sec-sleep -->
+
+
+<!-- ════════════════ 炸屎危機 ════════════════ -->
+<div class="scenario-section scene-poop" id="sec-poop">
+  <div class="scene-hdr">
+    <div class="scene-icon">💩</div>
+    <div class="scene-text">
+      <h2>炸屎危機</h2>
+      <p>換尿布 · 屁屁護理 · 日常育兒整理</p>
+    </div>
+    <span class="scene-count">7 件商品</span>
+  </div>
+  <div class="grid" id="g-poop">
+
+    <!-- P1 DIDI 尿布台 -->
+    <div class="card" data-scene="poop" data-kw="DIDI 尿布台 實木 高低可調 換尿布">
+      <div class="card-hdr">
+        <div class="eicon">🪵</div>
+        <div><div class="cbrand">DIDI</div><div class="cname">高低可調實木尿布台（PEVA 3D 防水軟墊）</div></div>
+        <div class="rank-badge">P1</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp thread">Threads</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.5</div>
+            <div class="ecom-reviews">40+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">官網</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.4</div>
+            <div class="ecom-reviews">品牌直售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">8 篇開箱文</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="70%"></div></div></div>
+        <div class="voice-pct">70%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">Dcard 2026 尿布台評比名列前茅，Threads 有實際心得。PTT 有客服負評文需注意，功能口碑強但售後風評有爭議。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>實木無上漆，安全無毒</li><li>高低可調，護腰設計</li>
+          <li>台面大（54×80cm），用期長</li><li>承重25kg穩固</li><li>雙層收納空間大</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>寬邊卡榫久用易鬆脫</li><li>炸屎滲入實木難清洗</li>
+          <li>PTT 有客服態度負評文</li><li>實木保養需額外心力</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 社群總評：功能受高度肯定，但耐久結構與客服口碑有爭議，建議多看長期使用評價。</div>
+      <a href="https://www.taiwandidi.com.tw/products/view3" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P2 UMEE HEKA -->
+    <div class="card" data-scene="poop" data-kw="UMEE HEKA 除臭尿布桶 荷蘭 防臭">
+      <div class="card-hdr">
+        <div class="eicon">🗑️</div>
+        <div><div class="cbrand">荷蘭 UMEE</div><div class="cname">HEKA M 除臭尿布桶</div></div>
+        <div class="rank-badge">P2</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp mommy">媽咪愛</span><span class="pp dcard">Dcard</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">媽咪愛 <span class="verified">✓ 確認</span></div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">5.0</div>
+            <div class="ecom-reviews">9 則評論 · 售出20</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.6</div>
+            <div class="ecom-reviews">多款色可選</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">安琪兒</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.7</div>
+            <div class="ecom-reviews">正品代理通路</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="63%"></div></div></div>
+        <div class="voice-pct">63%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 尿布桶討論串的「不需專用袋」代表品牌。媽咪愛實測確認：5.0 星 / 9 則全五星評論，換袋便利性獲一致好評。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>不需專用耗材，省錢省事</li><li>市售垃圾袋皆可用</li>
+          <li>單手投入，操作便利</li><li>媽咪愛 5.0 全五星</li><li>外觀簡潔荷蘭設計</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>換袋/開蓋時仍有臭味</li><li>密封效果不如專用袋款</li>
+          <li>容量約35片尿布偏少</li><li>媽咪愛評論數量尚少(9則)</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：媽咪愛 5.0 滿分，不需耗材是最大差異化，適合不想被廠商綁定的爸媽。</div>
+      <a href="https://www.angelbaby.com.tw/products/5230030600001-6" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P3 貝恩 濕紙巾 -->
+    <div class="card" data-scene="poop" data-kw="貝恩 baan 嬰兒柔濕巾 濕紙巾 寶寶">
+      <div class="card-hdr">
+        <div class="eicon">🧻</div>
+        <div><div class="cbrand">貝恩 Baan</div><div class="cname">嬰兒保養柔濕巾 80抽×24包</div></div>
+        <div class="rank-badge">P3</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span>
+        <span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">200+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">熱銷 1000+ 件</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">30+ 篇開箱</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="96%"></div></div></div>
+        <div class="voice-pct">96%</div>
+        <span class="voice-grade grade-s">S級</span>
+      </div>
+      <div class="buzz">台灣濕紙巾市場長銷霸主。官方標榜「熱銷破億包」，momo/蝦皮均有 4.9 高評，Dcard「連抽地獄走開」成為最高頻社群評語。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>超厚型有彈性，不易破</li><li>不連抽，一抽一張精準</li>
+          <li>含水量高，一次擦乾淨</li><li>無Paraben/酒精/螢光劑</li><li>momo/蝦皮均4.9★頂評</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>單價偏高（箱購較划算）</li><li>極敏感肌需另行確認</li>
+          <li>市面仿製品多，需認正品</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：12 件商品中綜合聲量最高（96%），PTT/Dcard/媽咪愛/電商四平台一致五星。</div>
+      <a href="https://www.angelbaby.com.tw/products/1570030200009" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P4 慕之恬廊 屁屁膏 -->
+    <div class="card" data-scene="poop" data-kw="慕之恬廊 mustela 衛蓓欣 屁屁膏 紅屁屁">
+      <div class="card-hdr">
+        <div class="eicon">🍑</div>
+        <div><div class="cbrand">慕之恬廊 Mustela</div><div class="cname">衛蓓欣 VBC 全效護膚膏</div></div>
+        <div class="rank-badge">P4</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">80+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">奇哥官網</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">正品授權販售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">部落格</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">15 篇評測</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="74%"></div></div></div>
+        <div class="voice-pct">74%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">PTT 三條屁屁膏比較文常被提到，Dcard 六款評比名次穩定。momo 80+ 則評論維持 4.8，「好推好洗」是最高頻社群評語。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>延展性佳，好推勻好塗抹</li><li>幾乎無味，敏感體質適用</li>
+          <li>氧化鋅含量適中</li><li>濕紙巾擦即可清洗</li><li>momo 4.8 穩定高評</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>部分使用者感有淡金屬味</li><li>清洗度不如紫D(Desitin)</li>
+          <li>售價比國產品牌高</li><li>嚴重紅疹需厚塗量較大</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：PTT 長期口碑品，電商評分 4.8+，適合日常預防型使用的首選。</div>
+      <a href="https://www.chick.com.tw/product-detail/XCA02578W" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P5 Peter Rabbit 包屁衣 -->
+    <div class="card" data-scene="poop" data-kw="Peter Rabbit 比得兔 包屁衣 奇哥 冰紗布">
+      <div class="card-hdr">
+        <div class="eicon">🐰</div>
+        <div><div class="cbrand">Peter Rabbit × 奇哥</div><div class="cname">春日兩段式調節開襟包屁衣（冰紗布）</div></div>
+        <div class="rank-badge">P5</div>
+      </div>
+      <div class="prow">
+        <span class="pp ig">IG</span><span class="pp thread">Threads</span><span class="pp dcard">Dcard</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.7</div>
+            <div class="ecom-reviews">30+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">奇哥官網</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.7</div>
+            <div class="ecom-reviews">正品授權通路</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">IG 打卡</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">高視覺曝光率</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="60%"></div></div></div>
+        <div class="voice-pct">60%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">比得兔 IP 在 IG/Threads 媽媽社群打卡率極高，奇哥品牌口碑背書穩定。PTT 上品牌辨識度略低，但整體論壇評價正面。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>冰紗布材質，夏天涼感佳</li><li>兩段式設計，穿著期更長</li>
+          <li>IP 打卡拍照率極高</li><li>奇哥品牌信賴度高</li><li>彌月禮送禮首選</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>IP 授權商品售價偏高</li><li>生長快的寶寶穿著期短</li>
+          <li>PTT 專屬討論度偏低</li><li>功能vs設計需取捨</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：IG 視覺打卡效果最強，走高質感禮品路線，電商評分穩定 4.7+。</div>
+      <a href="https://www.chick.com.tw/product-detail/PJ6281P00M" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P6 Like-it 收納籃 -->
+    <div class="card" data-scene="poop" data-kw="Like-it 隙縫收納籃 洗衣籃 日本 堆疊">
+      <div class="card-hdr">
+        <div class="eicon">🧺</div>
+        <div><div class="cbrand">日本 Like-it</div><div class="cname">隙縫型可堆疊含蓋收納洗衣籃（三層組）</div></div>
+        <div class="rank-badge">P6</div>
+      </div>
+      <div class="prow">
+        <span class="pp dcard">Dcard</span><span class="pp ig">IG</span><span class="pp ptt">PTT</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">特力屋</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">4.5</div>
+            <div class="ecom-reviews">實體通路主售</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">東森購物</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.6</div>
+            <div class="ecom-reviews">20+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">IG 居家版</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">—</div>
+            <div class="ecom-reviews">收納帳號推薦</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="50%"></div></div></div>
+        <div class="voice-pct">50%</div>
+        <span class="voice-grade grade-c">C級</span>
+      </div>
+      <div class="buzz">Dcard 居家版、IG 收納帳號常見分享，日系設計質感佳。育兒媽媽族群的討論度相對薄弱，與炸屎危機情境連結性較低。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>隙縫設計，小坪數救星</li><li>可堆疊，彈性擴充層數</li>
+          <li>附蓋防灰塵，整齊美觀</li><li>日本設計質感，IG打卡佳</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>無防潮設計，潮濕環境需注意</li><li>三層組體積大，移動不易</li>
+          <li>育兒論壇討論量低</li><li>與炸屎情境連結需加強</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 社群總評：居家生活聲量尚可，但育兒媽媽族群聲量偏低，建議補強媽媽社群內容。</div>
+      <a href="https://www.this-this.co/this-this/index.php?action=product_detail&prod_no=P0094700120087" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- P7 nac nac 洗衣精 -->
+    <div class="card" data-scene="poop" data-kw="nac nac 嬰兒洗衣精 低敏 寶寶 洗衣補充包">
+      <div class="card-hdr">
+        <div class="eicon">🧴</div>
+        <div><div class="cbrand">nac nac</div><div class="cname">低敏親膚嬰兒洗衣精 1罐+2補充包</div></div>
+        <div class="rank-badge">P7</div>
+      </div>
+      <div class="prow">
+        <span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-grid">
+          <div class="ecom-item">
+            <div class="ecom-label">momo</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">150+ 則評論</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.8</div>
+            <div class="ecom-reviews">熱銷 500+ 件</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">媽咪愛</div>
+            <div class="ecom-stars">★★★★★</div>
+            <div class="ecom-score">4.9</div>
+            <div class="ecom-reviews">100+ 則評論</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="85%"></div></div></div>
+        <div class="voice-pct">85%</div>
+        <span class="voice-grade grade-s">S級</span>
+      </div>
+      <div class="buzz">台灣嬰兒洗衣精長銷品，PTT 被稱「最穩定、最好買」。momo 150+ 則評論維持 4.9，媽咪愛 100+ 則同樣 4.9，補充包受環保媽媽高度好評。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>低敏配方，敏感肌寶寶適用</li><li>酵素清潔力強，奶垢炸屎不怕</li>
+          <li>momo/媽咪愛均 4.9★ 高評</li><li>補充包環保又划算</li><li>通路廣，折扣多易入手</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>香味較濃，部分媽媽不偏好</li><li>頑固油漬需多次清洗</li>
+          <li>競爭者多，差異化不夠強</li><li>低敏版清潔力略低於酵素版</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 社群總評：三平台均 4.9★ 頂評，momo+蝦皮+媽咪愛全數高分，PTT 五星長銷品王。</div>
+      <a href="https://www.nacnac.com.tw/zh-TW/products/2540431100030" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+  </div><!-- /g-poop -->
+</div><!-- /sec-poop -->
+
+<div class="empty" id="emptyState" style="display:none">🔍 找不到符合商品，請試試其他關鍵字</div>
+
+</div><!-- /page-body -->
+
+<!-- footnote -->
+<div class="footnote">
+  ＊ 電商平台評分依調查期間（2026年6月）各平台公開資訊整理；✓確認標記代表經頁面直接核實，其餘為搜尋資料彙整之參考值。<br>
+  ＊ 綜合聲量指數 = 社群平台討論熱度（40%）+ 電商評分換算（35%）+ 部落格/媒體篇數（25%）之加權計算。<br>
+  ＊ 聲量等級：S（90%+）、A（75-89%）、B（55-74%）、C（54%以下）
+</div>
+
+<footer>
+  辰妍生活選品｜市場聲量調查 · 資料庫版本 v4 · 情境：孕期好眠 / 炸屎危機<br>
+  資料來源：PTT BabyMother · Dcard 親子版 · 媽咪愛 · momo · 蝦皮 · 安琪兒 · 奇哥 · IG/Threads 媽媽社群 · 部落格媒體 · 2026年6月
+</footer>
+
+<script>
+let curTab = 'all';
+
+function switchTab(t, btn) {
+  curTab = t;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function onSearch() { applyFilters(); }
+
+function applyFilters() {
+  const q = document.getElementById('si').value.toLowerCase().trim();
+  const s = document.getElementById('sec-sleep');
+  const p = document.getElementById('sec-poop');
+
+  s.classList.toggle('hidden', curTab === 'poop');
+  p.classList.toggle('hidden', curTab === 'sleep');
+
+  let total = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    const sceneOk = curTab === 'all' || card.dataset.scene === curTab;
+    const textOk  = !q || card.dataset.kw.includes(q) || card.innerText.toLowerCase().includes(q);
+    const show = sceneOk && textOk;
+    card.classList.toggle('hidden', !show);
+    if (show) total++;
+  });
+
+  // Hide sections if all their cards are hidden
+  ['sleep','poop'].forEach(sc => {
+    const sec = document.getElementById('sec-' + sc);
+    if (!sec.classList.contains('hidden')) {
+      const vis = sec.querySelectorAll('.card:not(.hidden)').length;
+      if (vis === 0) sec.classList.add('hidden');
+    }
+  });
+
+  document.getElementById('emptyState').style.display = total === 0 ? 'block' : 'none';
+}
+
+// Animate voice bars
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.voice-fill').forEach(el => {
+      const w = el.dataset.w;
+      el.style.width = '0';
+      setTimeout(() => { el.style.width = w; }, 150);
+    });
+  }, 200);
+});
+</script>
+</body>
+</html>
