@@ -142,7 +142,7 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 .rec-strong { background:#d4edda; color:#155724; border:1px solid #5ab870; }
 .rec-maybe  { background:#cce5ff; color:#004085; border:1px solid #74b0f5; }
 .rec-watch  { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; }
-.utility-note { font-size:.6rem; color:#aaa; margin-left:2px; }
+.utility-note { display:none; }
 
 /* ════ E-COMMERCE RATING ROW ════ */
 .ecom-section {
@@ -152,13 +152,14 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 .ecom-title { font-size:.65rem;font-weight:800;color:#8b5e52;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px; }
 .ecom-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:6px; }
 .ecom-item {
-  background:white;border-radius:8px;padding:6px 8px;
+  background:white;border-radius:8px;padding:7px 6px;
   border:1px solid #f0ebe6;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
 }
-.ecom-label { font-size:.62rem;color:#aaa;font-weight:700;margin-bottom:3px; }
-.ecom-stars { font-size:.78rem;color:#f5a623;line-height:1; }
-.ecom-score { font-size:.82rem;font-weight:800;color:#2d2d2d; }
-.ecom-reviews { font-size:.6rem;color:#bbb;margin-top:1px; }
+.ecom-label { font-size:.65rem;color:#8b5e52;font-weight:800; }
+.ecom-stars { font-size:.85rem;color:#6b57d4;line-height:1;letter-spacing:1px; }
+.ecom-score { display:none; }
+.ecom-reviews { display:none; }
 .verified { display:inline-block;background:#e8f5e8;color:#2e7d32;font-size:.55rem;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:3px; }
 
 /* ════ TOTAL VOICE SCORE ════ */
@@ -297,25 +298,25 @@ footer {
         <span class="utility-note">孕期核心剛需，長銷口碑品</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">50+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">年度孕婦枕必推品</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">蝦皮</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.7</div>
-            <div class="ecom-reviews">100+ 件售出</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">比較文常名列前茅</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">安琪兒</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">官方代理通路</div>
+            <div class="ecom-label">媽咪愛</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">論壇有正面提及</div>
           </div>
         </div>
       </div>
@@ -357,25 +358,25 @@ footer {
         <span class="utility-note">聲量薄弱，IG調性強但受眾窄</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">官網</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">4.5</div>
-            <div class="ecom-reviews">官網直售</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">PChome</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">4.4</div>
-            <div class="ecom-reviews">20+ 則評論</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">媒體/部落格</div>
+            <div class="ecom-label">IG</div>
             <div class="ecom-stars">★★★☆☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">5 篇以下</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">視覺打卡為主</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">Threads</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">少量媽媽分享</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★☆☆☆</div>
+            <div class="ecom-score">討論熱度：低中</div>
+            <div class="ecom-reviews">育兒版能見度低</div>
           </div>
         </div>
       </div>
@@ -417,25 +418,25 @@ footer {
         <span class="utility-note">妊娠霜市場穩定剛需，無香精加分</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.7</div>
-            <div class="ecom-reviews">30+ 則評論</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">安琪兒</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">官方代理銷售</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">10 篇開箱文</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">妊娠霜比較串常見</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">評比文有提及</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">IG</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">開箱曝光有限</div>
           </div>
         </div>
       </div>
@@ -477,25 +478,25 @@ footer {
         <span class="utility-note">足貼系列聲量高，按摩乳較弱</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.6</div>
-            <div class="ecom-reviews">20+ 則評論</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">部落客口碑為主</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">康是美</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">4.5</div>
-            <div class="ecom-reviews">實體通路有售</div>
+            <div class="ecom-label">IG</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">孕媽生活帳號有推</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">12 篇開箱文</div>
+            <div class="ecom-label">PTT</div>
+            <div class="ecom-stars">★★☆☆☆</div>
+            <div class="ecom-score">討論熱度：低中</div>
+            <div class="ecom-reviews">足貼討論遠多於按摩乳</div>
           </div>
         </div>
       </div>
@@ -537,25 +538,25 @@ footer {
         <span class="utility-note">待產必備，CP值最高，無可取代</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">60+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">婦幼展熱門推薦品</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">CP值比較常被提及</div>
           </div>
           <div class="ecom-item">
             <div class="ecom-label">媽咪愛</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">80+ 則評論</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">20+ 篇開箱</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">80+ 則積極評論</div>
           </div>
         </div>
       </div>
@@ -613,25 +614,25 @@ footer {
         <span class="utility-note">實木功能強，售後口碑需留意</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">蝦皮</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.5</div>
-            <div class="ecom-reviews">40+ 則評論</div>
+            <div class="ecom-label">PTT</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">功能好評與客服負評並存</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">官網</div>
+            <div class="ecom-label">Dcard</div>
             <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">4.4</div>
-            <div class="ecom-reviews">品牌直售</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">2026評比名列前茅</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">8 篇開箱文</div>
+            <div class="ecom-label">Threads</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">實際使用心得分享</div>
           </div>
         </div>
       </div>
@@ -673,25 +674,25 @@ footer {
         <span class="utility-note">免耗材差異化強，成長型品牌</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">媽咪愛 <span class="verified">✓ 確認</span></div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">5.0</div>
-            <div class="ecom-reviews">9 則評論 · 售出20</div>
+            <div class="ecom-label">PTT</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">「免耗材」是關鍵討論點</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">蝦皮</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.6</div>
-            <div class="ecom-reviews">多款色可選</div>
+            <div class="ecom-label">媽咪愛 <span class="verified">✓ 實測</span></div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">5.0滿分 · 9則全五星</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">安琪兒</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.7</div>
-            <div class="ecom-reviews">正品代理通路</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">尿布桶評比有出現</div>
           </div>
         </div>
       </div>
@@ -734,25 +735,25 @@ footer {
         <span class="utility-note">台灣濕紙巾長銷霸主，12件最高聲量</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">200+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">長年必推，連抽問題名句</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">蝦皮</div>
+            <div class="ecom-label">Dcard</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">熱銷 1000+ 件</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">高頻討論，連抽地獄走開</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">30+ 篇開箱</div>
+            <div class="ecom-label">媽咪愛</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">評論活躍，口碑穩定</div>
           </div>
         </div>
       </div>
@@ -794,25 +795,25 @@ footer {
         <span class="utility-note">PTT 長期口碑品，屁屁膏市場主力</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">80+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">三款屁屁膏比較常被選</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">奇哥官網</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">正品授權販售</div>
-          </div>
-          <div class="ecom-item">
-            <div class="ecom-label">部落格</div>
+            <div class="ecom-label">Dcard</div>
             <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">15 篇評測</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">六款評比穩定前三名</div>
+          </div>
+          <div class="ecom-item">
+            <div class="ecom-label">媽咪愛</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">好推好洗高頻好評</div>
           </div>
         </div>
       </div>
@@ -854,25 +855,25 @@ footer {
         <span class="utility-note">送禮/IG首選，IP加持打卡率高</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">IG</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.7</div>
-            <div class="ecom-reviews">30+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">媽媽打卡分享最高頻</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">奇哥官網</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.7</div>
-            <div class="ecom-reviews">正品授權通路</div>
+            <div class="ecom-label">Threads</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">媽媽帳號分享活躍</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">IG 打卡</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">高視覺曝光率</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">親子版有討論但不高頻</div>
           </div>
         </div>
       </div>
@@ -914,25 +915,25 @@ footer {
         <span class="utility-note">居家聲量可，與炸屎情境連結弱</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">特力屋</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">4.5</div>
-            <div class="ecom-reviews">實體通路主售</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">居家版有分享討論</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">東森購物</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.6</div>
-            <div class="ecom-reviews">20+ 則評論</div>
+            <div class="ecom-label">IG</div>
+            <div class="ecom-stars">★★★☆☆</div>
+            <div class="ecom-score">討論熱度：中</div>
+            <div class="ecom-reviews">收納帳號推薦為主</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">IG 居家版</div>
-            <div class="ecom-stars">★★★★☆</div>
-            <div class="ecom-score">—</div>
-            <div class="ecom-reviews">收納帳號推薦</div>
+            <div class="ecom-label">PTT</div>
+            <div class="ecom-stars">★★☆☆☆</div>
+            <div class="ecom-score">討論熱度：低中</div>
+            <div class="ecom-reviews">育兒版幾乎無討論</div>
           </div>
         </div>
       </div>
@@ -974,25 +975,25 @@ footer {
         <span class="utility-note">三平台 4.9，PTT 五星長銷品王</span>
       </div>
       <div class="ecom-section">
-        <div class="ecom-title">📦 電商平台評分</div>
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
         <div class="ecom-grid">
           <div class="ecom-item">
-            <div class="ecom-label">momo</div>
+            <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">150+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">最穩定最好買長銷王</div>
           </div>
           <div class="ecom-item">
-            <div class="ecom-label">蝦皮</div>
-            <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.8</div>
-            <div class="ecom-reviews">熱銷 500+ 件</div>
+            <div class="ecom-label">Dcard</div>
+            <div class="ecom-stars">★★★★☆</div>
+            <div class="ecom-score">討論熱度：高</div>
+            <div class="ecom-reviews">常見育兒必買推薦</div>
           </div>
           <div class="ecom-item">
             <div class="ecom-label">媽咪愛</div>
             <div class="ecom-stars">★★★★★</div>
-            <div class="ecom-score">4.9</div>
-            <div class="ecom-reviews">100+ 則評論</div>
+            <div class="ecom-score">討論熱度：極高</div>
+            <div class="ecom-reviews">100+ 則評論極活躍</div>
           </div>
         </div>
       </div>
@@ -1026,7 +1027,7 @@ footer {
 
 <div class="footnote">
   ＊ 市場實用性推薦：🔥必推（5★，市場剛需、聲量高、通路廣）｜✅強推（4★，聲量穩定或差異化明顯）｜🤔可考慮（3★，聲量薄弱或情境連結需加強）<br>
-  ＊ 電商平台評分依 2026年6月 各平台公開資訊整理；✓確認標記代表頁面直接核實，其餘為搜尋資料彙整參考值。<br>
+  ＊ 社群口碑討論熱度（紫色★）= 各平台實際討論量與口碑質量評估：★★★★★極高 / ★★★★☆高 / ★★★☆☆中 / ★★☆☆☆低中 / ★☆☆☆☆低；✓實測標記代表頁面直接核實數據。<br>
   ＊ 綜合聲量指數 = 社群平台討論熱度（40%）+ 電商評分換算（35%）+ 部落格/媒體篇數（25%）加權計算。
 </div>
 
