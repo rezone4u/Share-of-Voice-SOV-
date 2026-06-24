@@ -6,7 +6,7 @@
 <title>辰妍生活選品｜市場聲量調查報告 v4</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f0eee8; color:#2d2d2d; }
+body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f4f2ec; color:#2d2d2d; }
 
 /* ── Update banner ── */
 .update-bar {
@@ -99,22 +99,23 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 
 /* Card header */
 .card-hdr {
-  padding:15px 17px 11px; border-bottom:1px solid #f5f0ec;
+  padding:15px 17px 11px; border-bottom:1px solid rgba(255,255,255,.1);
   display:flex; align-items:flex-start; gap:11px; position:relative;
+  background:#1e2348;
 }
 .rank-badge {
   position:absolute; top:11px; right:11px;
   width:26px;height:26px;border-radius:50%;
-  background:#e5e2db;color:#3d4080;
+  background:rgba(255,255,255,.18);color:#c0c8e8;
   font-size:.68rem;font-weight:800;
   display:flex;align-items:center;justify-content:center;
 }
 .eicon {
-  width:46px;height:46px;border-radius:11px;background:#f2f0ea;
+  width:46px;height:46px;border-radius:11px;background:rgba(255,255,255,.12);
   display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;
 }
-.cbrand { font-size:.68rem;color:#c4634e;font-weight:700;letter-spacing:.3px; }
-.cname  { font-size:.9rem;font-weight:700;margin-top:3px;line-height:1.35;padding-right:28px; }
+.cbrand { font-size:.68rem;color:#a0aacc;font-weight:700;letter-spacing:.3px; }
+.cname  { font-size:.9rem;font-weight:700;margin-top:3px;line-height:1.35;padding-right:28px;color:#ffffff; }
 
 /* Social platform pills */
 .prow { display:flex;flex-wrap:wrap;gap:5px;padding:9px 17px 0; }
@@ -147,7 +148,7 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 /* ════ E-COMMERCE RATING ROW ════ */
 .ecom-section {
   margin:10px 17px 0;
-  background:#f2f0ea;border-radius:10px;padding:10px 12px;
+  background:#f4f2ec;border-radius:10px;padding:10px 12px;
 }
 .ecom-title { font-size:.65rem;font-weight:800;color:#8b5e52;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px; }
 .ecom-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:6px; }
@@ -169,7 +170,7 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 }
 .voice-label-text { font-size:.68rem;font-weight:700;color:#8b5e52;white-space:nowrap; }
 .voice-bar-wrap { flex:1; }
-.voice-bg { background:#e8e5de;border-radius:8px;height:10px;overflow:hidden; }
+.voice-bg { background:#e8e6e0;border-radius:8px;height:10px;overflow:hidden; }
 .voice-fill {
   height:100%;border-radius:8px;
   background:linear-gradient(90deg,#c4634e,#d4886e);
@@ -189,31 +190,31 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 
 /* Pros / Cons */
 .pros-cons { display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:11px 17px;flex:1; }
-.pro-box { background:#edf7ed;border-radius:9px;padding:8px 10px; }
-.con-box { background:#fdf0f0;border-radius:9px;padding:8px 10px; }
+.pro-box { background:#f4f2ec;border-radius:9px;padding:8px 10px;border:1px solid #e8e6e0; }
+.con-box { background:#f4f2ec;border-radius:9px;padding:8px 10px;border:1px solid #e8e6e0; }
 .pc-t { font-size:.66rem;font-weight:800;margin-bottom:4px; }
-.pro-box .pc-t { color:#1b6e1b; }
-.con-box .pc-t { color:#b02020; }
+.pro-box .pc-t { color:#1e2348; }
+.con-box .pc-t { color:#1e2348; }
 .pc-list { list-style:none; }
 .pc-list li { font-size:.73rem;color:#444;line-height:1.5;padding:1px 0;border-bottom:1px dashed rgba(0,0,0,.05); }
 .pc-list li:last-child { border-bottom:none; }
-.pro-box .pc-list li::before { content:'✓ ';color:#2e7d32; }
-.con-box .pc-list li::before { content:'✗ ';color:#c62828; }
+.pro-box .pc-list li::before { content:'✓ ';color:#1e2348; }
+.con-box .pc-list li::before { content:'✗ ';color:#c4634e; }
 
 /* Verdict */
-.verdict { margin:0 17px 9px;padding:7px 10px;border-radius:8px;font-size:.74rem;font-weight:600;line-height:1.5; }
-.verdict.positive { background:#e8f5e8;color:#1b5e20;border-left:3px solid #43a047; }
-.verdict.mixed    { background:#fffde7;color:#6a4f00;border-left:3px solid #f9a825; }
-.verdict.caution  { background:#fce4ec;color:#880e4f;border-left:3px solid #e91e63; }
+.verdict { margin:0 17px 9px;padding:7px 10px;border-radius:8px;font-size:.74rem;font-weight:600;line-height:1.5;background:#f4f2ec;color:#1e2348;border-left:3px solid #c4634e; }
+.verdict.positive { background:#f4f2ec;color:#1e2348;border-left:3px solid #c4634e; }
+.verdict.mixed    { background:#f4f2ec;color:#1e2348;border-left:3px solid #c4634e; }
+.verdict.caution  { background:#f4f2ec;color:#1e2348;border-left:3px solid #c4634e; }
 
 /* Link */
 .card-link {
   display:block;text-align:center;padding:9px;
-  border-top:1px solid #e5e2db;color:#2c3060;
+  border-top:1px solid #e8e6e0;color:#1e2348;
   font-size:.75rem;font-weight:700;text-decoration:none;
-  background:#f3f1ec;transition:background .18s;
+  background:#f4f2ec;transition:background .18s;
 }
-.card-link:hover { background:#e3e0d8; }
+.card-link:hover { background:#e8e6e0; }
 
 /* Empty */
 .empty { text-align:center;padding:60px;color:#bbb;font-size:.9rem; }
