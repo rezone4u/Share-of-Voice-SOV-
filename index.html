@@ -6,7 +6,7 @@
 <title>辰妍生活選品｜市場聲量調查報告 v4</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f7f4f0; color:#2d2d2d; }
+body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f0eee8; color:#2d2d2d; }
 
 /* ── Update banner ── */
 .update-bar {
@@ -20,7 +20,7 @@ body { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#
 
 /* ── Header ── */
 header {
-  background:linear-gradient(135deg,#7a5248 0%,#c4856e 55%,#e8a88e 100%);
+  background:linear-gradient(135deg,#1e2348 0%,#3d4090 55%,#6068b8 100%);
   color:white; padding:28px 24px 24px; text-align:center;
 }
 header h1 { font-size:1.6rem; font-weight:800; letter-spacing:2px; }
@@ -40,19 +40,19 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
   border-bottom:3px solid transparent; margin-bottom:-1px;
   transition:all .2s; white-space:nowrap;
 }
-.tab-btn:hover { color:#c4856e; }
-.tab-btn.active { color:#7a5248; border-bottom-color:#c4856e; }
+.tab-btn:hover { color:#c4634e; }
+.tab-btn.active { color:#1e2348; border-bottom-color:#c4634e; }
 
 /* ── Search ── */
 .searchwrap { background:white; padding:10px 24px 14px; border-bottom:1px solid #ede8e3; }
 .searchwrap input {
   max-width:700px; display:block; margin:0 auto;
   width:100%; padding:9px 16px;
-  border:2px solid #e0d5cc; border-radius:24px;
-  font-size:.88rem; outline:none; background:#faf8f5;
+  border:2px solid #d5d2c8; border-radius:24px;
+  font-size:.88rem; outline:none; background:#f4f2ec;
   transition:border-color .2s;
 }
-.searchwrap input:focus { border-color:#c4856e; background:white; }
+.searchwrap input:focus { border-color:#c4634e; background:white; }
 
 /* ── Body ── */
 .page-body { max-width:1200px; margin:0 auto; padding:0 24px 48px; }
@@ -90,7 +90,7 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 
 .card {
   background:white; border-radius:16px; overflow:hidden;
-  box-shadow:0 2px 10px rgba(0,0,0,.06); border:1.5px solid #f0ebe6;
+  box-shadow:0 2px 10px rgba(0,0,0,.06); border:1.5px solid #e5e2db;
   display:flex; flex-direction:column;
   transition:transform .2s,box-shadow .2s;
 }
@@ -105,15 +105,15 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 .rank-badge {
   position:absolute; top:11px; right:11px;
   width:26px;height:26px;border-radius:50%;
-  background:#f0e8e4;color:#8b5e52;
+  background:#e5e2db;color:#3d4080;
   font-size:.68rem;font-weight:800;
   display:flex;align-items:center;justify-content:center;
 }
 .eicon {
-  width:46px;height:46px;border-radius:11px;background:#fdf3ee;
+  width:46px;height:46px;border-radius:11px;background:#f2f0ea;
   display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;
 }
-.cbrand { font-size:.68rem;color:#c4856e;font-weight:700;letter-spacing:.3px; }
+.cbrand { font-size:.68rem;color:#c4634e;font-weight:700;letter-spacing:.3px; }
 .cname  { font-size:.9rem;font-weight:700;margin-top:3px;line-height:1.35;padding-right:28px; }
 
 /* Social platform pills */
@@ -147,13 +147,13 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 /* ════ E-COMMERCE RATING ROW ════ */
 .ecom-section {
   margin:10px 17px 0;
-  background:#faf4f0;border-radius:10px;padding:10px 12px;
+  background:#f2f0ea;border-radius:10px;padding:10px 12px;
 }
 .ecom-title { font-size:.65rem;font-weight:800;color:#8b5e52;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px; }
 .ecom-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:6px; }
 .ecom-item {
   background:white;border-radius:8px;padding:7px 6px;
-  border:1px solid #f0ebe6;text-align:center;
+  border:1px solid #e5e2db;text-align:center;
   display:flex;flex-direction:column;align-items:center;gap:4px;
 }
 .ecom-label { font-size:.65rem;color:#8b5e52;font-weight:800; }
@@ -169,13 +169,13 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 }
 .voice-label-text { font-size:.68rem;font-weight:700;color:#8b5e52;white-space:nowrap; }
 .voice-bar-wrap { flex:1; }
-.voice-bg { background:#f0e8e4;border-radius:8px;height:10px;overflow:hidden; }
+.voice-bg { background:#e8e5de;border-radius:8px;height:10px;overflow:hidden; }
 .voice-fill {
   height:100%;border-radius:8px;
-  background:linear-gradient(90deg,#c4856e,#e8b89e);
+  background:linear-gradient(90deg,#c4634e,#d4886e);
   transition:width 1.2s ease;
 }
-.voice-pct { font-size:.9rem;font-weight:800;color:#7a5248;min-width:38px;text-align:right; }
+.voice-pct { font-size:.9rem;font-weight:800;color:#1e2348;min-width:38px;text-align:right; }
 .voice-grade {
   font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:8px;white-space:nowrap;
 }
@@ -209,11 +209,11 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 /* Link */
 .card-link {
   display:block;text-align:center;padding:9px;
-  border-top:1px solid #f0ebe6;color:#8b5e52;
+  border-top:1px solid #e5e2db;color:#2c3060;
   font-size:.75rem;font-weight:700;text-decoration:none;
-  background:#faf5f2;transition:background .18s;
+  background:#f3f1ec;transition:background .18s;
 }
-.card-link:hover { background:#f0e5dc; }
+.card-link:hover { background:#e3e0d8; }
 
 /* Empty */
 .empty { text-align:center;padding:60px;color:#bbb;font-size:.9rem; }
@@ -566,18 +566,18 @@ footer {
         <div class="voice-pct">80%</div>
         <span class="voice-grade grade-a">A級</span>
       </div>
-      <div class="buzz">PTT 婦幼展討論必提品，媽咪愛 80+ 則評論，部落格開箱超過 20 篇。「CP 值最高待產包」是最常見標題關鍵字。</div>
+      <div class="buzz">PTT 婦幼展討論必提品，媽咪愛 80+ 則評論，部落格開箱超過 20 篇。「CP 值最高待產包」是最常見標題關鍵字。附贈 60×90cm 加大抑菌看護墊 7 片，同類待產包中面積最大、數量最多，是社群最常點名的實用賣點。</div>
       <div class="pros-cons">
         <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
-          <li>品項齊全，自然/剖腹均適用</li><li>CP值五款待產包最高</li>
-          <li>附折疊袋可轉型媽媽包</li><li>出貨快品質穩定</li>
+          <li>60×90cm 加大抑菌看護墊 7片，同級最大最多</li><li>品項齊全，自然/剖腹均適用</li>
+          <li>CP值五款待產包最高</li><li>附折疊袋可轉型媽媽包</li>
         </ul></div>
         <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
-          <li>產褥墊評價不佳</li><li>附贈提袋偏小偏軟</li>
+          <li>產褥墊材質評價不佳（看護墊為優勢，兩者不同）</li><li>附贈提袋偏小偏軟</li>
           <li>無客製化組合選項</li><li>部分附件品質略遜競品</li>
         </ul></div>
       </div>
-      <div class="verdict positive">📣 電商評分穩定 4.8-4.9，PTT/媽咪愛雙平台強力推薦，CP 值王者首選。</div>
+      <div class="verdict positive">📣 電商評分穩定 4.8-4.9，PTT/媽咪愛雙平台強力推薦，加大看護墊是同類最強實用亮點。</div>
       <a href="https://www.nacnac.com.tw/zh-TW/products/2540431600082" target="_blank" class="card-link">🛒 前往商品頁面</a>
     </div>
 
@@ -801,7 +801,7 @@ footer {
             <div class="ecom-label">PTT</div>
             <div class="ecom-stars">★★★★★</div>
             <div class="ecom-score">討論熱度：極高</div>
-            <div class="ecom-reviews">三款屁屁膏比較常被選</div>
+            <div class="ecom-reviews">vs 紫D(Desitin)、Bübchen 三條比較 VBC 延展性奪冠</div>
           </div>
           <div class="ecom-item">
             <div class="ecom-label">Dcard</div>
@@ -823,18 +823,18 @@ footer {
         <div class="voice-pct">74%</div>
         <span class="voice-grade grade-b">B級</span>
       </div>
-      <div class="buzz">PTT 三條屁屁膏比較文常被提到，Dcard 六款評比名次穩定。momo 80+ 則評論維持 4.8，「好推好洗」是最高頻社群評語。</div>
+      <div class="buzz">PTT「三條屁屁膏比較文」指的是 VBC（慕之恬廊）、紫D（Desitin）、Bübchen 三品牌對比。共識結論：<strong>VBC 延展性最佳</strong>，每次換尿布薄塗一層即可，且用濕紙巾直接擦除不留殘膜，日常預防效率三款最高。Dcard 六款評比名次穩定，momo 80+ 則評論維持 4.8。</div>
       <div class="pros-cons">
         <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
-          <li>延展性佳，好推勻好塗抹</li><li>幾乎無味，敏感體質適用</li>
-          <li>氧化鋅含量適中</li><li>濕紙巾擦即可清洗</li>
+          <li>🏆 延展性三款最佳，薄塗一抹即均勻（vs 紫D厚重難推）</li><li>濕紙巾即可清除，換尿布零負擔</li>
+          <li>幾乎無味，敏感體質適用</li><li>氧化鋅含量適中，預防日常紅屁屁</li>
         </ul></div>
         <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
-          <li>部分使用者感有淡金屬味</li><li>清洗度不如紫D(Desitin)</li>
-          <li>售價比國產品牌高</li><li>嚴重紅疹需厚塗量較大</li>
+          <li>嚴重紅疹治療效果不如紫D（Desitin氧化鋅濃度更高）</li><li>部分使用者感有淡金屬味</li>
+          <li>售價比國產品牌高</li><li>嚴重紅疹需厚塗用量大</li>
         </ul></div>
       </div>
-      <div class="verdict positive">📣 PTT 長期口碑品，電商評分 4.8+，日常預防型使用的首選。</div>
+      <div class="verdict positive">📣 PTT 三條比較文延展性冠軍，日常預防型首選；嚴重紅疹場景建議搭配紫D使用。</div>
       <a href="https://www.chick.com.tw/product-detail/XCA02578W" target="_blank" class="card-link">🛒 前往商品頁面</a>
     </div>
 
