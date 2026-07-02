@@ -84,6 +84,17 @@ header p  { margin-top:6px; font-size:0.83rem; opacity:.85; }
 }
 .scene-sleep .scene-count { background:#3d4090; }
 .scene-poop  .scene-count { background:#c4634e; }
+/* 寶寶副食品 / 外出探險 — 共用同組配色但背景略異 */
+.scene-food .scene-hdr { background:#f0ece8; border-left:4px solid #c4634e; }
+.scene-adventure .scene-hdr { background:#edf0f8; border-left:4px solid #3d4090; }
+.scene-food .scene-icon { background:rgba(196,99,78,.15); }
+.scene-adventure .scene-icon { background:rgba(61,64,144,.15); }
+.scene-food .scene-text h2 { color:#1e2348; }
+.scene-adventure .scene-text h2 { color:#1e2348; }
+.scene-food .scene-text p { color:#6a4a40; }
+.scene-adventure .scene-text p { color:#4a4e80; }
+.scene-food .scene-count { background:#c4634e; }
+.scene-adventure .scene-count { background:#3d4090; }
 
 /* ── Card grid ── */
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; }
@@ -237,12 +248,12 @@ footer {
 <!-- ── Update bar ── -->
 <div class="update-bar">
   <span class="dot"></span>
-  最新更新日期：<strong>2026年6月24日</strong>　｜　資料庫版本 v4　｜　情境主題：孕期好眠 / 炸屎危機
+  最新更新日期：<strong>2026年7月2日</strong>　｜　資料庫版本 v5　｜　情境主題：孕期好眠 / 炸屎危機 / 寶寶副食品 / 外出探險篇
 </div>
 
 <header>
   <h1>辰妍生活選品｜市場聲量調查報告</h1>
-  <p>12 件商品 · 跨平台社群 + 電商評分 + 市場實用性推薦全彙整</p>
+  <p>48 件商品 · 4大情境主題 · 跨平台社群 + 電商評分 + 市場實用性推薦全彙整</p>
   <div class="pbadges">
     <span class="pbadge">PTT BabyMother</span>
     <span class="pbadge">Dcard 親子版</span>
@@ -257,9 +268,11 @@ footer {
 <!-- ── Tabs ── -->
 <div class="tabwrap">
   <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('all',this)">🗂 全部商品（12）</button>
+    <button class="tab-btn active" onclick="switchTab('all',this)">🗂 全部商品（48）</button>
     <button class="tab-btn" onclick="switchTab('sleep',this)">🌙 孕期好眠（5）</button>
     <button class="tab-btn" onclick="switchTab('poop',this)">💩 炸屎危機（7）</button>
+    <button class="tab-btn" onclick="switchTab('food',this)">🥣 寶寶副食品（15）</button>
+    <button class="tab-btn" onclick="switchTab('adventure',this)">🌳 外出探險篇（21）</button>
   </div>
 </div>
 
@@ -1023,6 +1036,1630 @@ footer {
   </div><!-- /g-poop -->
 </div><!-- /sec-poop -->
 
+<!-- ════════════════ 寶寶副食品 ════════════════ -->
+<div class="scenario-section scene-food" id="sec-food">
+  <div class="scene-hdr">
+    <div class="scene-icon">🥣</div>
+    <div class="scene-text">
+      <h2>寶寶副食品</h2>
+      <p>副食品粥品 · 餐椅餐具 · 副食品工具</p>
+    </div>
+    <span class="scene-count">15 件商品</span>
+  </div>
+  <div class="grid" id="g-food">
+
+    <!-- F1 無毒農 4-6M粥 -->
+    <div class="card" data-scene="food" data-kw="無毒農 副食品 寶寶粥 4-6M 冷凍 10倍粥 八口味">
+      <div class="card-hdr">
+        <div class="eicon">🍚</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">小寶寶10倍粥（冷凍）八口味【4-6M】</div></div>
+        <div class="rank-badge">F1</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="80%"></div></div></div>
+        <div class="voice-pct">80%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 多篇媽媽比較文回購率最高，職業媽媽省時首選。食材逐批實驗室把關，<strong>分齡最細（4-6M/7-9M/10-12M/1Y+同業唯一）</strong>，可拆塊加熱不浪費份量，3天內到貨。八口味輪換不讓寶寶膩。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>分齡最細（4-6M起共4階段），同業唯一</li>
+          <li>可拆塊加熱，份量彈性不浪費</li>
+          <li>食材逐批實驗室把關，安全透明</li>
+          <li>八口味多元，避免寶寶吃膩</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>口味偏淡，部分寶寶不買單</li>
+          <li>僅網路購買，急缺時補貨不便</li>
+          <li>少數吻仔魚口味有異物投訴紀錄</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 PTT 媽媽回購率同業最高，職業媽媽省時首選，分齡分類是核心競爭優勢。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/59160" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F2 無毒農 7-9M粥 -->
+    <div class="card" data-scene="food" data-kw="無毒農 副食品 寶寶粥 7-9M 冷凍 7倍粥 18入">
+      <div class="card-hdr">
+        <div class="eicon">🍲</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">中寶寶7倍粥（冷凍）18入【7-9M】</div></div>
+        <div class="rank-badge">F2</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="82%"></div></div></div>
+        <div class="voice-pct">82%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">7-9M 是媽媽購買副食品粥頻率最高的階段，無毒農此款為 PTT 最常被點名回購。<strong>18入大量包</strong>，米粒飽滿、口感介於5-4倍粥，多款推薦文提及「寶寶吃完還討著要」。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>18入大量包，補貨次數少</li>
+          <li>米粒飽滿口感佳，7-9M 適口性最高</li>
+          <li>到貨速度快（3天內）</li>
+          <li>多口味可選，避免偏食</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>僅網路購買，急缺補貨不便</li>
+          <li>部分寶寶不適應米粒顆粒感</li>
+          <li>開封後需盡快食用（冷凍保鮮）</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 7-9M 副食品購買高峰期最佳選擇，PTT 媽媽最常回購的齡段款式。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/72044" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F3 無毒農 10-12M粥 -->
+    <div class="card" data-scene="food" data-kw="無毒農 副食品 寶寶粥 10-12M 冷凍 4倍粥 12入">
+      <div class="card-hdr">
+        <div class="eicon">🍛</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">大寶寶4倍粥（冷凍）12入【10-12M】</div></div>
+        <div class="rank-badge">F3</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="75%"></div></div></div>
+        <div class="voice-pct">75%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">10-12M 的四倍粥口感接近成人稠粥，適合培養幼兒飲食習慣。PTT 媽媽建議可搭配自製湯品增加豐富度，<strong>此款可平順銜接 13M+ 燉飯系列</strong>，延長品牌使用周期。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>四倍粥口感接近成人食物，培養習慣</li>
+          <li>多口味，料多飽滿</li>
+          <li>可銜接 13M+ 系列，延長使用期</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>12入包裝較少，補購頻率高</li>
+          <li>顆粒感明顯，需確認咀嚼能力</li>
+          <li>僅網路購買</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 大寶寶銜接期首選，平順過渡到幼兒飲食的關鍵款式。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/67792" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F4 無毒農 13M+ 幼兒系列 -->
+    <div class="card" data-scene="food" data-kw="無毒農 副食品 13M 幼兒 燉飯 炒飯 螺旋麵 點心 冷凍">
+      <div class="card-hdr">
+        <div class="eicon">🍝</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">燉飯/炒飯/螺旋麵/點心（冷凍）10入【13M+】</div></div>
+        <div class="rank-badge">F4</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="70%"></div></div></div>
+        <div class="voice-pct">70%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">1歲以上幼兒多樣化選擇，<strong>同一品牌從副食品期一路延伸到幼兒期</strong>，減少轉換摸索成本。燉飯/炒飯/螺旋麵/點心多品類可輪換，口感向大人飲食靠攏。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>多品類（燉飯/炒飯/麵/點心）可輪換</li>
+          <li>延長品牌使用期至幼兒期</li>
+          <li>口感向成人食物靠攏，培養飲食習慣</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>1歲以上才適用，開始時間晚</li>
+          <li>較新品類，口碑積累中</li>
+          <li>僅網路購買</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 副食品卒業後的輕鬆延伸選擇，同品牌黏著度高的媽媽首選。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/66539" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F5 無毒農 常溫 -->
+    <div class="card" data-scene="food" data-kw="無毒農 常溫 副食品 7M 寶寶粥 拌醬 外出">
+      <div class="card-hdr">
+        <div class="eicon">🎒</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">常溫副食品粥／拌醬【7M+，外出攜帶】</div></div>
+        <div class="rank-badge">F5</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="62%"></div></div></div>
+        <div class="voice-pct">62%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 共識：常溫版口感遜於冷凍版，但外出免帶冰袋是無可替代的優勢。農純鄉常溫版因代言人問題部分媽媽轉向無毒農，常溫粥適合搭配外出場景使用。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>常溫保存，外出免帶冰袋</li>
+          <li>輕巧便攜，旅行外出首選</li>
+          <li>拌醬款可搭配各品牌粥品</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>口感偏稀偏糊，遜於冷凍版</li>
+          <li>部分媽媽回購率低於冷凍版</li>
+          <li>常溫保存添加物需確認</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 外出攜帶場景必備，但在家優先選冷凍版，常溫版為補充型選購。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/72068" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F6 Stokke Tripp Trapp -->
+    <div class="card" data-scene="food" data-kw="Stokke Tripp Trapp 餐椅 高腳椅 成長椅 挪威 6M">
+      <div class="card-hdr">
+        <div class="eicon">🪑</div>
+        <div><div class="cbrand">挪威 Stokke</div><div class="cname">Tripp Trapp 成長型餐椅 6m+ 經典組合（櫸木）</div></div>
+        <div class="rank-badge">F6</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp thread">Threads</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Threads</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="76%"></div></div></div>
+        <div class="voice-pct">76%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT/Dcard 餐椅討論必出現品牌，<strong>可用至成人（100歲）</strong>，腳踏板無段調整符合人體工學，二手市場保值。Threads 媽媽討論「值不值得投資」的核心爭議：貴在設計與品牌，全套配件費用高。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>可用 6M 至成人，長期投資划算</li>
+          <li>腳踏板無段調整，符合人體工學</li>
+          <li>顏質高，提升家居格調</li>
+          <li>二手轉賣保值</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>售價高，配件（護欄/餐盤/坐墊）全部另購，整套破萬</li>
+          <li>木材材質怕撞傷</li>
+          <li>調整機構較費工</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 長期投資型首選，若家庭有多孩計畫或幼兒使用年限長，是最划算的高腳椅。</div>
+      <a href="https://www.angelbaby.com.tw/products/stokke-tripp-trapp-6m" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F7 辛巴圍兜 -->
+    <div class="card" data-scene="food" data-kw="小獅王辛巴 Simba 防水圍兜 好吃圍兜 台灣製">
+      <div class="card-hdr">
+        <div class="eicon">🦁</div>
+        <div><div class="cbrand">小獅王辛巴 Simba</div><div class="cname">好吃防水圍兜（多款可選）</div></div>
+        <div class="rank-badge">F7</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="73%"></div></div></div>
+        <div class="voice-pct">73%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">台灣製造，媽媽圈高頻推薦。<strong>防水抗汙 4.5 級、35g 超輕量、立體大口袋落食不漏接</strong>，折疊後體積縮 70%。無甲醛無螢光劑，恐龍樂團/蜜桃菠菠等多款花色 IG 打卡率高。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>台灣製造，品質管控透明</li>
+          <li>35g 超輕量，立體大口袋</li>
+          <li>防水抗汙 4.5 級，折疊收納方便</li>
+          <li>無甲醛、無螢光劑認證</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>矽膠材質較硬，少數嬰兒穿戴不適</li>
+          <li>限定款花色補貨時間不定</li>
+          <li>售價比市場平均略高</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 台灣製高 CP 值防水圍兜，輕量 + 立體口袋設計是同類最強組合。</div>
+      <a href="https://www.angelbaby.com.tw/products/5840030500007-10" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F8 BEABA圍兜 -->
+    <div class="card" data-scene="food" data-kw="BEABA 法國 兩用防髒圍兜 可拆 袖套">
+      <div class="card-hdr">
+        <div class="eicon">👶</div>
+        <div><div class="cbrand">法國 BÉABA</div><div class="cname">可拆式兩用防髒圍兜（多款選擇）</div></div>
+        <div class="rank-badge">F8</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="60%"></div></div></div>
+        <div class="voice-pct">60%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">BÉABA 以副食品調理機聞名，圍兜為品牌延伸。可拆設計（袖套 + 圍兜各自使用），法式設計感強，IG 打卡多於 PTT 討論，台灣社群口碑積累相對薄弱。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>可拆兩用（全套 / 單圍兜）靈活使用</li>
+          <li>法式設計感強，顏質高</li>
+          <li>可機洗，易清理</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT/Dcard 台灣討論量少</li>
+          <li>售價偏高</li>
+          <li>防水功能需確認長期機洗後效果</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 設計感強但台灣聲量薄弱，適合重視法式美學的媽媽自選，不宜作為主力推廣品。</div>
+      <a href="https://www.angelbaby.com.tw/products/1200030500006-7" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F9 monee 湯匙第一階 -->
+    <div class="card" data-scene="food" data-kw="monee 韓國 白金矽膠 湯匙 第一階 寶寶餐具">
+      <div class="card-hdr">
+        <div class="eicon">🥄</div>
+        <div><div class="cbrand">韓國 monee</div><div class="cname">100%白金矽膠智慧矽膠湯匙 第一階</div></div>
+        <div class="rank-badge">F9</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp mommy">媽咪愛</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="71%"></div></div></div>
+        <div class="voice-pct">71%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 媽媽稱「矽膠湯匙唯一推薦」。<strong>白金矽膠通過德國 LFGB + 美國 FDA + 歐盟 EN14372 三認證</strong>，-40°C~250°C 耐溫，軟硬適中不傷牙齦，可微波 / 洗碗機 / 消毒鍋全相容。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>三大國際認證（LFGB/FDA/EN14372）</li>
+          <li>軟硬適中，不傷寶寶牙齦</li>
+          <li>可微波、洗碗機、消毒鍋全相容</li>
+          <li>貓咪握把設計，寶寶易抓握</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>售價偏高於一般矽膠湯匙</li>
+          <li>第一/二階需各別購買，費用累積</li>
+          <li>韓國品牌，台灣售後服務有限</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 PTT 媽媽「矽膠湯匙唯一推薦」，三認證安全性是最強賣點。</div>
+      <a href="https://www.173findneeds.com.tw/portal_c1_cnt_page.php?owner_num=c1_54623&button_num=c1&folder_id=88155&cnt_id=325497&search_word=&up_page=" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F10 monee 湯匙第二階 -->
+    <div class="card" data-scene="food" data-kw="monee 韓國 白金矽膠 湯匙 第二階 自主進食">
+      <div class="card-hdr">
+        <div class="eicon">🥄</div>
+        <div><div class="cbrand">韓國 monee</div><div class="cname">100%白金矽膠智慧矽膠湯匙 第二階</div></div>
+        <div class="rank-badge">F10</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">蝦皮</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="69%"></div></div></div>
+        <div class="voice-pct">69%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">第二階設計湯匙較長、握把更適合自主進食練習，材質與第一階同級白金矽膠。建議與 monee 吸盤碗搭配同系列購入，外觀配色一致且使用體驗佳。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>適合 7M+ 自主進食練習</li>
+          <li>材質同第一階，安全標準一致</li>
+          <li>可搭配 monee 吸盤碗整套使用</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>與第一階差異細微，需試用確認</li>
+          <li>兩階段各自購買費用較高</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 進階自主進食配件，建議搭配吸盤碗整套組合入手，同系列質感統一。</div>
+      <a href="https://www.173findneeds.com.tw/portal_c1_cnt_page.php?owner_num=c1_54623&button_num=c1&folder_id=88155&cnt_id=325504&search_word=&up_page=" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F11 monee 學習水杯 -->
+    <div class="card" data-scene="food" data-kw="monee 韓國 白金矽膠 學習水杯 檸檬黃 寶寶">
+      <div class="card-hdr">
+        <div class="eicon">🥤</div>
+        <div><div class="cbrand">韓國 monee</div><div class="cname">100%白金矽膠學習水杯 / 檸檬黃</div></div>
+        <div class="rank-badge">F11</div>
+      </div>
+      <div class="prow"><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="62%"></div></div></div>
+        <div class="voice-pct">62%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">monee 旗下學習水杯，同系列白金矽膠材質，吸管設計適合初學喝水。檸檬黃配色 IG 打卡感強，適合搭配同系列餐具購入提升整體質感。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>白金矽膠材質，同系列安全標準</li>
+          <li>設計感強，IG 打卡高顏值</li>
+          <li>吸管設計適合初學喝水</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT 討論量遠不如 Richell 利其爾</li>
+          <li>功能評價未見明顯優勢</li>
+          <li>進口品維修零件取得不便</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 monee 系列餐具打包配套選項，設計感強，但功能面聲量不如日本 Richell。</div>
+      <a href="https://www.173findneeds.com.tw/portal_c1_cnt_page.php?owner_num=c1_54623&button_num=c1&folder_id=93026&cnt_id=350960&search_word=&up_page=" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F12 b.box 湯匙叉子組 -->
+    <div class="card" data-scene="food" data-kw="b.box bbox 澳洲 湯匙 叉子 馬卡龍 9M 寶寶餐具">
+      <div class="card-hdr">
+        <div class="eicon">🍴</div>
+        <div><div class="cbrand">澳洲 b.box</div><div class="cname">專利湯匙叉子組 馬卡龍系列【9M+】</div></div>
+        <div class="rank-badge">F12</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="62%"></div></div></div>
+        <div class="voice-pct">62%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 有大量餐具比較文，真實原聲兩極分化：<strong>叉子專利彎頭設計直拿入口角度自然，吃水果切丁順手</strong>；但湯匙彎弧方向讓食物易掉落，多位媽媽表示「只用一次就收起來」。b.box 品牌強項在台灣是水杯，餐具競品 OXO / Doddl 好評率更高。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>叉子彎頭設計佳，直拿入口自然，吃水果切丁順手</li>
+          <li>無 BPA/PVC，澳洲食品安全認證</li>
+          <li>附收納盒，外出攜帶方便衛生</li>
+          <li>馬卡龍色系顏值高，IG 打卡感強</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT 多人反映湯匙彎弧食物易掉，「用一次就收起來」</li>
+          <li>叉子優、湯匙弱，整組 CP 值偏低</li>
+          <li>餐具類競品 OXO / Doddl 在台灣討論好評率更高</li>
+          <li>b.box 品牌台灣強項為水杯，餐具聲量相對弱</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 叉子設計有亮點但湯匙兩極評價明顯，對自主進食訓練有興趣可考慮搭配 OXO 或 Doddl 使用。</div>
+      <a href="https://www.angelbaby.com.tw/products/2120150100018-22" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F13 minikoioi 吸盤碗 -->
+    <div class="card" data-scene="food" data-kw="minikoioi 土耳其 矽膠 吸盤碗 防滑 副食品">
+      <div class="card-hdr">
+        <div class="eicon">🥣</div>
+        <div><div class="cbrand">土耳其 minikoioi</div><div class="cname">防滑矽膠吸盤碗（多色可選）</div></div>
+        <div class="rank-badge">F13</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="72%"></div></div></div>
+        <div class="voice-pct">72%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 有專文詢問「好用嗎？」，媽咪愛限時熱銷團購。<strong>耐熱 200°C，CE 歐盟認證，密封蓋可外出攜帶</strong>；但吸力評價兩極：有人「吸得很穩」也有人「根本吸不住」。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>設計簡約，多色選擇</li>
+          <li>耐熱 200°C，CE 歐盟認證</li>
+          <li>附密封蓋，可外出攜帶副食品</li>
+          <li>可微波、電鍋使用</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>吸力穩定度評價兩極</li>
+          <li>新品有香皂氣味，需多次清洗</li>
+          <li>少數用戶反映邊緣縫隙問題</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 設計美型但吸力穩定度是最大疑慮，建議媽媽先試一個確認適用再大量購入。</div>
+      <a href="https://www.angelbaby.com.tw/products/5660150100023-31" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F14 minikoioi 餐盤 -->
+    <div class="card" data-scene="food" data-kw="minikoioi 土耳其 矽膠 餐盤 防滑 分格 副食品">
+      <div class="card-hdr">
+        <div class="eicon">🍽️</div>
+        <div><div class="cbrand">土耳其 minikoioi</div><div class="cname">防滑矽膠餐盤（多色可選）</div></div>
+        <div class="rank-badge">F14</div>
+      </div>
+      <div class="prow"><span class="pp mommy">媽咪愛</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">蝦皮</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="68%"></div></div></div>
+        <div class="voice-pct">68%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">三格分隔設計，一餐多品同時上桌，適合副食品初期訓練多元口味。餐盤吸力評價略優於吸盤碗款，可微波、耐熱安全無毒。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>三格分隔，一餐多品同時呈現</li>
+          <li>可微波、耐熱，方便加熱</li>
+          <li>易清洗，矽膠柔軟不易碎</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>同款吸力仍有少數不穩反映</li>
+          <li>體積較大，外出攜帶不便</li>
+          <li>新品氣味需清洗適應期</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 分格餐盤功能實用，副食品初期控制分量的好幫手，搭配吸盤碗整套使用最佳。</div>
+      <a href="https://www.angelbaby.com.tw/products/5660150100001-9" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- F15 Tgm 分裝盒 -->
+    <div class="card" data-scene="food" data-kw="Tgm 韓國 白金矽膠 副食品 冷凍 分裝盒 冰磚 S M L XL">
+      <div class="card-hdr">
+        <div class="eicon">❄️</div>
+        <div><div class="cbrand">韓國 Tgm</div><div class="cname">粉彩白金矽膠副食品冷凍儲存分裝盒（S-XL）</div></div>
+        <div class="rank-badge">F15</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="73%"></div></div></div>
+        <div class="voice-pct">73%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 與 MOYUUM / 2ANGELS 並列<strong>副食品分裝盒三大首選</strong>。Dcard 2026 評比：「格身硬度適中，從冷凍庫取出手指頂一下即脫模」。白金矽膠 FDA 認證，-40°C~250°C 耐溫，S-XL 四尺寸靈活搭配。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>脫模容易，底部一按即出</li>
+          <li>S-XL 四種尺寸靈活搭配</li>
+          <li>白金矽膠 FDA 認證，-40°C~250°C</li>
+          <li>粉彩配色 IG 打卡感強</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>矽膠體 + PP 蓋需分開清洗</li>
+          <li>PP 蓋耐熱較低，勿用沸水浸泡</li>
+          <li>整套購入費用較高</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 Dcard/PTT 副食品分裝盒三大選之一，脫模設計是最受好評的核心優點。</div>
+      <a href="https://www.angelbaby.com.tw/products/5800150200058-61" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+  </div><!-- /g-food -->
+</div><!-- /sec-food -->
+
+<!-- ════════════════ 外出探險篇 ════════════════ -->
+<div class="scenario-section scene-adventure" id="sec-adventure">
+  <div class="scene-hdr">
+    <div class="scene-icon">🌳</div>
+    <div class="scene-text">
+      <h2>外出探險篇</h2>
+      <p>輕量推車 · 外出哺餵 · 安撫玩具 · 戶外防護</p>
+    </div>
+    <span class="scene-count">21 件商品</span>
+  </div>
+  <div class="grid" id="g-adventure">
+
+    <!-- A1 ABC Design Zephair -->
+    <div class="card" data-scene="adventure" data-kw="ABC Design Zephair 德國 輕量 推車 嬰兒推車 秒收 登機">
+      <div class="card-hdr">
+        <div class="eicon">🚼</div>
+        <div><div class="cbrand">德國 ABC Design</div><div class="cname">Zephair 輕量秒收嬰兒推車（多款選擇）</div></div>
+        <div class="rank-badge">A1</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp thread">Threads</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Threads</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="85%"></div></div></div>
+        <div class="voice-pct">85%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">PTT/Dcard 外出輕量推車多篇專文比較（vs JollySoon/TRVL/Tourist），共識：<strong>超輕單手操作、秒收站立可登機、越重越好推</strong>、下方置物空間大。Dcard 媽媽稱「戰車等級性能，輕便型便利」。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>輕量鋁合金，秒收後可自行站立</li>
+          <li>單手操作順暢，前輪 360° 旋轉</li>
+          <li>可登機，旅行首選</li>
+          <li>下方置物空間大，重載越好推</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>開收需技巧，初次使用需練習</li>
+          <li>雨罩較緊，1歲後易被踢破</li>
+          <li>車身偏窄，部分寶寶感覺擠</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 PTT/Dcard 外出輕量推車討論常勝軍，秒收站立可登機是最強賣點。</div>
+      <a href="https://www.angelbaby.com.tw/products/1530010200148-149" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A2 KIDMORY 風扇 -->
+    <div class="card" data-scene="adventure" data-kw="KIDMORY 夾式 低噪 風扇 推車 嬰兒 多功能">
+      <div class="card-hdr">
+        <div class="eicon">🌀</div>
+        <div><div class="cbrand">KIDMORY</div><div class="cname">夾式多功能低噪風扇</div></div>
+        <div class="rank-badge">A2</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp thread">Threads</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Threads</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="60%"></div></div></div>
+        <div class="voice-pct">60%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">KIDMORY 以輕量推車聞名，夾式風扇為搭售配件。<strong>3段風力、最低 55dB 低噪音</strong>，夾式設計可裝推車/床/桌/書桌，輕巧外出攜帶方便。IG/Threads 媽媽搭配購入討論多。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>夾式通用（推車/床/桌/書桌）</li>
+          <li>55dB 低噪音，寶寶不受驚</li>
+          <li>3段風力可調，輕巧攜帶</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>獨立評測少，主要為品牌搭售</li>
+          <li>電池續航未見詳細評測</li>
+          <li>PTT 社群討論量低</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 KIDMORY 推車配套夾式風扇，同品牌組合購買最省力，台灣夏天外出必備。</div>
+      <a href="https://www.angelbaby.com.tw/products/5290011000001-2" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A3 SKIP HOP Forma -->
+    <div class="card" data-scene="adventure" data-kw="SKIP HOP Forma 媽媽包 菱格紋 多功能 後背包">
+      <div class="card-hdr">
+        <div class="eicon">👜</div>
+        <div><div class="cbrand">美國 SKIP HOP</div><div class="cname">Forma 菱格紋多功能媽媽包</div></div>
+        <div class="rank-badge">A3</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="77%"></div></div></div>
+        <div class="voice-pct">77%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 稱「美國第一媽媽包品牌」，Forma 款是討論熱門款。<strong>輕量防水材質，空包可自行站立，附尿布墊</strong>，爸爸也可以背。Amazon 評分 4.7/5，台灣媽咪愛限時熱銷。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>輕量防水，空包可自立</li>
+          <li>推車掛鉤設計，附尿布墊</li>
+          <li>多隔層收納，爸媽皆可背</li>
+          <li>Amazon 4.7/5 高評分</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>容量中等，大量裝備時略嫌不夠</li>
+          <li>設計偏美式，部分媽媽覺得不夠精緻</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 PTT 媽媽包討論常勝軍，輕量防水 + 推車掛鉤是外出組合最強配件。</div>
+      <a href="https://www.angelbaby.com.tw/products/5880110300003-4skiphopforma" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A4 THOMSON 行熱杯 -->
+    <div class="card" data-scene="adventure" data-kw="THOMSON 行熱杯 雙電壓 TM-SAK65C 沖奶 外出 旅行">
+      <div class="card-hdr">
+        <div class="eicon">☕</div>
+        <div><div class="cbrand">法國 THOMSON</div><div class="cname">雙電壓智能即時行熱杯 TM-SAK65C</div></div>
+        <div class="rank-badge">A4</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp thread">Threads</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">嘖嘖</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="72%"></div></div></div>
+        <div class="voice-pct">72%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">嘖嘖集資超標品，「外出沖奶神器」定位。<strong>插座 + Type-C 行動電源雙用，6段溫控（60/70/75/80/100°C），316 醫療級不鏽鋼內膽，600ml 大容量</strong>，可帶機上。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>插座 + Type-C 行動電源雙加熱</li>
+          <li>316 醫療級不鏽鋼，無異味</li>
+          <li>6段溫控精準，泡奶最適溫</li>
+          <li>國際電壓，海外旅行可用</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>媽媽社群口碑少，科技爸爸選購居多</li>
+          <li>加熱時間較傳統煮水壺長</li>
+          <li>售價中高</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 行動電源即可沖奶是最大革命，外出哺乳瓶媽媽最值得投資的工具。</div>
+      <a href="https://www.wonder.tw/products/tm-sak65c" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A5 MOTHER-K 拋棄式奶瓶 -->
+    <div class="card" data-scene="adventure" data-kw="MOTHER-K 韓國 Ecozen 拋棄式奶瓶 免洗 外出 3餐組">
+      <div class="card-hdr">
+        <div class="eicon">🍼</div>
+        <div><div class="cbrand">韓國 MOTHER-K</div><div class="cname">精粹 Ecozen 旋轉伸縮拋棄式奶瓶 3餐組</div></div>
+        <div class="rank-badge">A5</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="75%"></div></div></div>
+        <div class="voice-pct">75%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 討論量高，「外出過夜必備神器」。Ecozen 材質透明感佳，<strong>溫感奶瓶袋顏色即時顯示水溫</strong>（冷藍/溫紅/熱透明），奶嘴收納盒可熱水消毒，節省包包空間。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>溫感設計，顏色即時顯示水溫</li>
+          <li>外觀質感好，每用必被詢問</li>
+          <li>奶嘴收納盒可熱水消毒，省空間</li>
+          <li>3餐組份量合理</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>耐熱僅 65°C，不能直接沖 100°C 熱水</li>
+          <li>軟袋不易測量奶量</li>
+          <li>不能蒸氣消毒鍋消毒</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 外出場景優化但耐熱限制需注意，建議先備溫水（40-50°C）再沖泡使用。</div>
+      <a href="https://www.angelbaby.com.tw/products/2460020100010-13" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A6 Marcus&Marcus 圍兜 -->
+    <div class="card" data-scene="adventure" data-kw="Marcus Marcus 加拿大 拋棄式 防水 圍兜 20入 外出">
+      <div class="card-hdr">
+        <div class="eicon">🧣</div>
+        <div><div class="cbrand">加拿大 Marcus&amp;Marcus</div><div class="cname">拋棄式防水圍兜 20入（多款選擇）</div></div>
+        <div class="rank-badge">A6</div>
+      </div>
+      <div class="prow"><span class="pp mommy">媽咪愛</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">蝦皮</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="67%"></div></div></div>
+        <div class="voice-pct">67%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">台灣有總代理（vkidsbaby），<strong>NT$179-199 / 20入，CP值極高</strong>。三層防水結構（不織布 + 吸水紙 + PE 防水膜），立體口袋接食，可撕調節頸圍，外出免清洗讓副食品用餐體驗大升級。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>NT$179/20入，外出免洗 CP 值高</li>
+          <li>三層防水 + 立體口袋接食</li>
+          <li>可撕頸圍調節，適應不同月齡</li>
+          <li>個別包裝，衛生便攜</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>拋棄式有環境負擔</li>
+          <li>長期費用高於矽膠圍兜</li>
+          <li>口袋承載量有限</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 外出副食品餐期必備，免清洗讓外出帶娃用餐輕鬆零壓力。</div>
+      <a href="https://www.angelbaby.com.tw/products/6110030500110-111" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A7 RICO 抗菌濕紙巾 -->
+    <div class="card" data-scene="adventure" data-kw="RICO baby 抗菌濕紙巾 20抽 15入 嬰兒">
+      <div class="card-hdr">
+        <div class="eicon">🧻</div>
+        <div><div class="cbrand">韓國 RICO baby（台灣代理：凱樂思 kelesone.com）</div><div class="cname">抗菌濕紙巾 20抽×15入</div></div>
+        <div class="rank-badge">A7</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="60%"></div></div></div>
+        <div class="voice-pct">60%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">韓國原裝進口，凱樂思台灣獨家代理。<strong>11道超純水淨化 + 抗菌配方</strong>，通過 Ellead 皮膚無刺激認證，無添加 8 種有害成分。媽媽圈部落客團購聲量穩定，使用者回饋「超好抽、不連抽、不易破」，15入量販外出備用划算。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>使用者實評：「超好抽不連抽、用到最後一張不浪費」</li>
+          <li>11道超純水淨化，Ellead 皮膚無刺激認證</li>
+          <li>無添加酒精、螢光劑等 8 種有害成分</li>
+          <li>15入量販，外出長期備貨 CP 值高</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT 原生討論量少，主要靠部落客團購擴散</li>
+          <li>知名度不如 WaterWipes 等歐美品牌</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 韓國進口抗菌濕紙巾，「好抽不連抽」是最常被引用的真實優點，大量備貨外出場景實用。</div>
+      <a href="https://www.kelesone.com/products/rico-baby-antibacterial-wet-wipes-20pcs-1-1" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A8 RICO 口手濕紙巾 -->
+    <div class="card" data-scene="adventure" data-kw="RICO baby 口手濕紙巾 30抽 12入 嬰兒 外出">
+      <div class="card-hdr">
+        <div class="eicon">🤲</div>
+        <div><div class="cbrand">韓國 RICO baby（台灣代理：凱樂思 kelesone.com）</div><div class="cname">口手濕紙巾 Recipe 30抽×12入</div></div>
+        <div class="rank-badge">A8</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">蝦皮</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="68%"></div></div></div>
+        <div class="voice-pct">68%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">Recipe 配方系列採食品成分，可直接接觸嘴部。<strong>使用者真實回饋：「超順抽不過敏」、「連寶寶都會主動要求用，說擦起來不痛很舒服」、「從寶寶出生愛用超過 3 年」</strong>。媽咪愛評分 4.9/5（584則），多位媽媽圈部落客長期推薦並開團。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>真實使用者：「超順抽、不連抽、不易破，用到最後一張」</li>
+          <li>寶寶反映「擦起來不痛舒服」，高回購率，有用超過 3 年的忠實媽媽</li>
+          <li>食品成分 Recipe 配方，直接接觸嘴部安全無虞</li>
+          <li>媽咪愛 4.9/5（584則評價），銷量逾 9,000 件</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT 原生討論量少，口碑主要靠部落客團購擴散</li>
+          <li>知名度不如 WaterWipes 等歐美品牌</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 媽咪愛 4.9/5 高分、真實回購率極高，「好抽不過敏、寶寶喜歡用」是最強口碑，外出口手擦拭首選。</div>
+      <a href="https://www.kelesone.com/products/rico-baby-baby-hand-mouth-wet-wipes-recipe-30pcs-1-1" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A9 Fisher-Price 小海馬 -->
+    <div class="card" data-scene="adventure" data-kw="Fisher-Price 費雪 聲光 安撫 小海馬 0M 哄睡 嬰兒玩具">
+      <div class="card-hdr">
+        <div class="eicon">🦄</div>
+        <div><div class="cbrand">Fisher-Price 費雪（奇哥代理）</div><div class="cname">聲光安撫小海馬【0m+】</div></div>
+        <div class="rank-badge">A9</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★★</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="86%"></div></div></div>
+        <div class="voice-pct">86%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">媽媽圈「江湖神器」稱號，全平台高頻推薦。<strong>8首搖籃曲播放約5分鐘，音樂輕柔似子宮聲，柔和燈光不傷眼</strong>，寶寶可抓握/咬/安撫/互動多用途。奇哥台灣代理，有保固。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>哄睡安撫效果廣受認可，江湖神器</li>
+          <li>燈光柔和，音樂似子宮聲</li>
+          <li>多用途（抓握/安撫/互動）</li>
+          <li>奇哥台灣代理，有售後保固</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>部分寶寶不買單（個人差異）</li>
+          <li>只播 5 分鐘需手動重按</li>
+          <li>電池消耗較快</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 媽媽圈安撫必備江湖神器，哄睡成功率高，幾乎是新生兒必入手品。</div>
+      <a href="https://www.chick.com.tw/product-detail/FEADGH82F" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A10 Fisher-Price 折疊玩樂板 -->
+    <div class="card" data-scene="adventure" data-kw="Fisher-Price 費雪 折疊玩樂板 0M 外出 感統 嬰兒玩具">
+      <div class="card-hdr">
+        <div class="eicon">🎮</div>
+        <div><div class="cbrand">Fisher-Price 費雪</div><div class="cname">折疊玩樂板【0m+】</div></div>
+        <div class="rank-badge">A10</div>
+      </div>
+      <div class="prow"><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="65%"></div></div></div>
+        <div class="voice-pct">65%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">外出便攜折疊設計，是健力架的輕量替代品。提供視覺刺激和感統體驗，0M+ 新生兒即可使用，費雪品牌信賴度加持，適合短途外出攜帶。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>折疊輕量，外出便攜</li>
+          <li>視覺刺激設計，0M+ 即可用</li>
+          <li>費雪品牌信賴度穩定</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>功能相對陽春，不如家用健力架豐富</li>
+          <li>討論量不如費雪小海馬</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 外出輕量感統玩具選項，費雪品牌保證品質，短途外出攜帶的補充配件。</div>
+      <a href="https://www.chick.com.tw/product-detail/FEAHML63F" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A11 Done by Deer -->
+    <div class="card" data-scene="adventure" data-kw="Done by Deer 丹麥 安撫玩具 多功能 0M 設計 感統">
+      <div class="card-hdr">
+        <div class="eicon">🦌</div>
+        <div><div class="cbrand">丹麥 Done by Deer</div><div class="cname">多功能安撫玩具【0m+】</div></div>
+        <div class="rank-badge">A11</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp thread">Threads</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Threads</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="65%"></div></div></div>
+        <div class="voice-pct">65%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">丹麥品牌，台灣有總代理 petiteboite，<strong>榮獲德國紅點設計大獎</strong>，多感官刺激（鏡子 / 響紙 / 鈴聲），可掛推車/嬰兒床。IG/Threads 媽媽社群高顏值視覺討論度，送禮首選。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>德國紅點設計大獎得主</li>
+          <li>多感官刺激（鏡子/響紙/鈴聲）</li>
+          <li>可掛推車嬰兒床，IG 高顏值打卡</li>
+          <li>通過歐盟及國際安全檢驗</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT/Dcard 台灣討論量偏少</li>
+          <li>售價偏高，功能類似品多</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 IG 系高顏值安撫玩具，設計感強功能紮實，最適合送禮或注重美學的媽媽。</div>
+      <a href="https://www.angelbaby.com.tw/products/581016010008788" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A12 Itzy Ritzy -->
+    <div class="card" data-scene="adventure" data-kw="Itzy Ritzy 美國 搖鈴 感統玩偶 3M 推車掛件">
+      <div class="card-hdr">
+        <div class="eicon">🎀</div>
+        <div><div class="cbrand">美國 Itzy Ritzy</div><div class="cname">搖鈴感統玩偶【3m+】</div></div>
+        <div class="rank-badge">A12</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★☆☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="62%"></div></div></div>
+        <div class="voice-pct">62%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">美國育兒網美品牌，IG 知名度遠高於 PTT/Dcard。<strong>搖鈴 + 彈力繩可訓練寶寶手部肌肉</strong>，NT$790，Tomali / YODEE / 安琪兒等台灣代理購買方便，多款可愛造型選擇。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>療癒造型 IG 高打卡率</li>
+          <li>搖鈴聲悅耳，彈力繩訓練手部</li>
+          <li>可掛推車健力架，台灣代理購買方便</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>PTT/Dcard 討論量少</li>
+          <li>功能偏單一，售價偏高</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 IG 系美國網美育兒品牌，推車掛件高顏值選擇，功能扎實但台灣社群聲量仍在累積。</div>
+      <a href="https://www.angelbaby.com.tw/products/5660160200042-45" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A13 Hape -->
+    <div class="card" data-scene="adventure" data-kw="Hape 德國 小小電動遊戲組 3M 感統玩具 嬰兒">
+      <div class="card-hdr">
+        <div class="eicon">🎯</div>
+        <div><div class="cbrand">德國 Hape</div><div class="cname">小小電動遊戲組【3m+】</div></div>
+        <div class="rank-badge">A13</div>
+      </div>
+      <div class="prow"><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="58%"></div></div></div>
+        <div class="voice-pct">58%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">德國 Hape 以 FSC 環保認證木製玩具聞名，品牌信賴度高。感統遊戲組輕便外出攜帶，3M+ 寶寶多感官刺激，注重環保的家長優先選購。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>FSC 環保認證，品質信賴</li>
+          <li>輕便外出攜帶方便</li>
+          <li>3M+ 多感官刺激</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>台灣社群討論量低</li>
+          <li>知名度不如費雪/奇哥</li>
+          <li>特定款式購買通路較少</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 注重環保的媽媽首選德國品牌，品質信賴但台灣市場聲量仍需積累。</div>
+      <a href="https://www.chick.com.tw/product-detail/FEAHYR57F" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A14 無毒農 米餅 -->
+    <div class="card" data-scene="adventure" data-kw="無毒農 米餅 5M 寶寶零食 有機 外出">
+      <div class="card-hdr">
+        <div class="eicon">🍪</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">米餅×5【5m+，外出零食】</div></div>
+        <div class="rank-badge">A14</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp ig">IG</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="70%"></div></div></div>
+        <div class="voice-pct">70%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">無毒農品牌延伸至零食品類，主打有機無添加。<strong>5M+ 米餅外出解饞神器</strong>，五包組量販划算，品牌信賴度從粥品延伸，媽媽同品牌購入意願高。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>有機無添加，品牌延伸信賴</li>
+          <li>5M+ 即可使用，門檻低</li>
+          <li>五包量販，外出備貨方便</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>口味選擇少，較新品類</li>
+          <li>聲量不如英敏特等進口品牌</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 無毒農品牌延伸，有機無添加是核心賣點，同品牌媽媽順手加購首選。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/65198" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A15 無毒農 水果凍乾 -->
+    <div class="card" data-scene="adventure" data-kw="無毒農 水果凍乾 10M 寶寶零食 天然 外出">
+      <div class="card-hdr">
+        <div class="eicon">🍓</div>
+        <div><div class="cbrand">無毒農 greenbox.tw</div><div class="cname">水果凍乾×4【10m+，外出水果補充】</div></div>
+        <div class="rank-badge">A15</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="62%"></div></div></div>
+        <div class="voice-pct">62%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">凍乾技術保留水果原味與營養，10M+ 適用，四包量販外出攜帶方便。天然零添加，作為外出水果補充的輕鬆解決方案。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>凍乾技術保留原味，天然無添加</li>
+          <li>四包量販，外出補充水果方便</li>
+          <li>品牌信賴度延伸</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>10M+ 才適用，使用窗口較窄</li>
+          <li>凍乾質地需注意噎食風險</li>
+          <li>討論量不如米餅款</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 10M+ 外出水果補充選擇，凍乾保留天然美味，搭配米餅一起備貨更完整。</div>
+      <a href="https://greenbox.tw/Products/ItemDetail/65113" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A16 Richell TLI 鴨嘴 -->
+    <div class="card" data-scene="adventure" data-kw="Richell 利其爾 TLI 第四代 鴨嘴 吸管 水杯 5M 學習">
+      <div class="card-hdr">
+        <div class="eicon">💧</div>
+        <div><div class="cbrand">日本 Richell 利其爾</div><div class="cname">TLI 第四代鴨嘴吸管兩用水杯組【5m+】</div></div>
+        <div class="rank-badge">A16</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="81%"></div></div></div>
+        <div class="voice-pct">81%</div>
+        <span class="voice-grade grade-a">A級</span>
+      </div>
+      <div class="buzz">Dcard/PTT 2026 學習水杯評比常勝軍，「<strong>倒著喝也不漏水</strong>」是最常被引用的優點。三階段成長型（鴨嘴→吸管→直飲），配件可替換，日本原裝品質穩定，媽咪愛限時熱銷常見。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>三階段成長型，一杯用到底</li>
+          <li>倒置不漏水，外出不怕灑</li>
+          <li>配件可單獨替換，日本品質穩定</li>
+          <li>媽咪愛/Dcard 年度推薦常客</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>吸管零件多，清洗費工</li>
+          <li>PPSU 材質稍脆，摔多易裂</li>
+          <li>配件單買費用累積</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 Dcard/PTT 學習水杯推薦榜常駐，三階段成長型是最高 CP 值選擇。</div>
+      <a href="https://www.angelbaby.com.tw/products/1620030400211-212" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A17 Richell AX 系列 -->
+    <div class="card" data-scene="adventure" data-kw="Richell 利其爾 AX 幻夢 吸管水杯 320ml 450ml 7M">
+      <div class="card-hdr">
+        <div class="eicon">🧃</div>
+        <div><div class="cbrand">日本 Richell 利其爾</div><div class="cname">AX 幻夢系列吸管水杯 320ml/450ml【7m+】</div></div>
+        <div class="rank-badge">A17</div>
+      </div>
+      <div class="prow"><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">蝦皮</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="74%"></div></div></div>
+        <div class="voice-pct">74%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">AX 系列是 TLI 的大容量進階款，<strong>320ml/450ml 兩種尺寸</strong>，外出全天攜帶夠用，設計更時尚，7M+ 可用，部分配件可與 TLI 系列通用，減少重複投資。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>大容量 320/450ml，長時外出夠用</li>
+          <li>設計更時尚，顏值升級</li>
+          <li>配件部分可與 TLI 通用</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>與 TLI 並列時選擇困難</li>
+          <li>售價比 TLI 高，體積較大</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 TLI 的大容量進階版，長時間外出或幼兒期升級選擇，設計感同步提升。</div>
+      <a href="https://www.angelbaby.com.tw/products/16200304158-160" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A18 SKIP HOP SLC -->
+    <div class="card" data-scene="adventure" data-kw="SKIP HOP SLC 感官星 按按樂 9M 嬰兒感統玩具">
+      <div class="card-hdr">
+        <div class="eicon">⭐</div>
+        <div><div class="cbrand">美國 SKIP HOP</div><div class="cname">SLC 感官星按按樂嬰兒感統玩具【9m+】</div></div>
+        <div class="rank-badge">A18</div>
+      </div>
+      <div class="prow"><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="67%"></div></div></div>
+        <div class="voice-pct">67%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">SKIP HOP 品牌延伸至感統玩具，SLC 為聲光感應型，9M+ 按壓 / 拍打即有聲光反應，刺激多感官發展，手眼協調訓練。搭配 SKIP HOP 媽媽包同品牌組合購買省心。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>多感官刺激設計，SKIP HOP 品牌信賴</li>
+          <li>9M+ 手眼協調訓練</li>
+          <li>外出攜帶方便</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>9M+ 才適用，使用窗口相對短</li>
+          <li>功能類似選擇多</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 SKIP HOP 品牌延伸感統玩具，搭配同品牌媽媽包組合購買省力，9M+ 感統刺激首選。</div>
+      <a href="https://www.angelbaby.com.tw/products/5880160100053" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A19 ALOBABY 防蚊 -->
+    <div class="card" data-scene="adventure" data-kw="ALOBABY 日本 草本 防蚊噴霧 110ml 寶寶 天然">
+      <div class="card-hdr">
+        <div class="eicon">🌿</div>
+        <div><div class="cbrand">日本 ALOBABY</div><div class="cname">寶寶草本防蚊噴霧 110ml</div></div>
+        <div class="rank-badge">A19</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp mommy">媽咪愛</span><span class="pp ig">IG</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★☆</span></span>
+        <span class="rec-badge rec-strong">✅ 強推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="68%"></div></div></div>
+        <div class="voice-pct">68%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT BabyMother 有媽媽推薦無化學 DEET 防蚊選項。<strong>ECOCERT 有機認證，天然迷迭香 / 檸檬草 / 柑橘精油配方</strong>，嬰兒適用配方，日本 ALOBABY 品牌在台灣有 YODEE 優迪代理。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>無化學 DEET，ECOCERT 有機認證</li>
+          <li>天然精油香氣宜人，嬰兒配方</li>
+          <li>台灣 YODEE 代理，購買方便</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>防蚊效期短（約 2-3 小時），需頻繁補噴</li>
+          <li>防效較化學 DEET 弱</li>
+          <li>部分寶寶對精油香氣敏感</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 嬰兒友善天然防蚊首選，無 DEET 讓媽媽安心，短時戶外活動最佳搭檔。</div>
+      <a href="https://www.angelbaby.com.tw/products/2480120200001" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A20 thinkbaby 防曬 -->
+    <div class="card" data-scene="adventure" data-kw="thinkbaby 美國 SPF50 防曬霜 純物理 6M 嬰兒 EWG">
+      <div class="card-hdr">
+        <div class="eicon">☀️</div>
+        <div><div class="cbrand">美國 thinkbaby</div><div class="cname">新寶貝 SPF50 純物理防曬霜【6m+】</div></div>
+        <div class="rank-badge">A20</div>
+      </div>
+      <div class="prow"><span class="pp ptt">PTT</span><span class="pp dcard">Dcard</span><span class="pp mommy">媽咪愛</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★★★</span></span>
+        <span class="rec-badge rec-must">🔥 必推</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Dcard</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">媽咪愛</div><div class="ecom-stars">★★★★☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="78%"></div></div></div>
+        <div class="voice-pct">78%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">PTT 媽媽推薦，<strong>EWG Level 1 最高安全評級</strong>，台灣媽媽夏季外出必備。大樹藥局 / 安琪兒 / PChome 多通路購買，媽媽常一次囤多瓶備用，Amazon 暢銷榜長期蟬聯。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>EWG Level 1 最高安全評級</li>
+          <li>純物理防曬，無化學刺激</li>
+          <li>6M+ 嬰兒適用，台灣多通路購買</li>
+          <li>Amazon 暢銷，口碑積累豐富</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>物理防曬偏油，部分媽媽覺得悶</li>
+          <li>擦後皮膚略白（白膜感）</li>
+        </ul></div>
+      </div>
+      <div class="verdict positive">📣 EWG L1 最高安全評級，台灣媽媽夏季外出嬰兒防曬的口碑第一選擇。</div>
+      <a href="https://www.angelbaby.com.tw/products/8440090600009" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+    <!-- A21 Grech&Co 太陽眼鏡 -->
+    <div class="card" data-scene="adventure" data-kw="Grech Co 丹麥 偏光 兒童 太陽眼鏡 0-6y UV400">
+      <div class="card-hdr">
+        <div class="eicon">🕶️</div>
+        <div><div class="cbrand">丹麥 Grech&amp;Co.</div><div class="cname">偏光兒童太陽眼鏡【0~6y】</div></div>
+        <div class="rank-badge">A21</div>
+      </div>
+      <div class="prow"><span class="pp ig">IG</span><span class="pp thread">Threads</span><span class="pp dcard">Dcard</span></div>
+      <div class="utility-row">
+        <span class="utility-label">市場實用性</span>
+        <span class="utility-stars"><span class="son">★★★☆☆</span></span>
+        <span class="rec-badge rec-maybe">🤔 可考慮</span>
+      </div>
+      <div class="ecom-section">
+        <div class="ecom-title">💬 社群口碑討論熱度</div>
+        <div class="ecom-grid">
+          <div class="ecom-item"><div class="ecom-label">IG</div><div class="ecom-stars">★★★★★</div></div>
+          <div class="ecom-item"><div class="ecom-label">Threads</div><div class="ecom-stars">★★★★☆</div></div>
+          <div class="ecom-item"><div class="ecom-label">PTT</div><div class="ecom-stars">★★★☆☆</div></div>
+        </div>
+      </div>
+      <div class="voice-score-section">
+        <div class="voice-label-text">綜合聲量</div>
+        <div class="voice-bar-wrap"><div class="voice-bg"><div class="voice-fill" style="width:0" data-w="65%"></div></div></div>
+        <div class="voice-pct">65%</div>
+        <span class="voice-grade grade-b">B級</span>
+      </div>
+      <div class="buzz">丹麥品牌，IG/Threads 媽媽社群高度視覺討論，台灣通過 CNS15067 國家標準認證 + CE 歐盟認證，UV400 偏光保護。<strong>親子款可搭配（寶寶/兒童/成人）</strong>，FSC 環保包裝，smallloft / kelesone 等選品店有售。</div>
+      <div class="pros-cons">
+        <div class="pro-box"><div class="pc-t">👍 優點</div><ul class="pc-list">
+          <li>UV400 偏光，CE + CNS 雙認證</li>
+          <li>親子款可搭配，IG 打卡感最強</li>
+          <li>FSC 環保包裝，多色選擇</li>
+          <li>0y~6y 全齡段適用</li>
+        </ul></div>
+        <div class="con-box"><div class="pc-t">👎 劣勢</div><ul class="pc-list">
+          <li>嬰幼兒配戴意願低，實用性因人而異</li>
+          <li>PTT/Dcard 討論量低</li>
+          <li>售價偏高</li>
+        </ul></div>
+      </div>
+      <div class="verdict mixed">📣 IG 系最美兒童太陽眼鏡，親子搭配打卡感最強，認證齊全，實用度取決於寶寶配戴意願。</div>
+      <a href="https://www.angelbaby.com.tw/products/1320110500223-231" target="_blank" class="card-link">🛒 前往商品頁面</a>
+    </div>
+
+  </div><!-- /g-adventure -->
+</div><!-- /sec-adventure -->
+
 <div class="empty" id="emptyState" style="display:none">🔍 找不到符合商品，請試試其他關鍵字</div>
 
 </div><!-- /page-body -->
@@ -1052,11 +2689,13 @@ function onSearch() { applyFilters(); }
 
 function applyFilters() {
   const q = document.getElementById('si').value.toLowerCase().trim();
-  const s = document.getElementById('sec-sleep');
-  const p = document.getElementById('sec-poop');
+  const allScenes = ['sleep','poop','food','adventure'];
 
-  s.classList.toggle('hidden', curTab === 'poop');
-  p.classList.toggle('hidden', curTab === 'sleep');
+  // Show/hide entire scene sections based on active tab
+  allScenes.forEach(sc => {
+    const sec = document.getElementById('sec-' + sc);
+    if (sec) sec.classList.toggle('hidden', curTab !== 'all' && curTab !== sc);
+  });
 
   let total = 0;
   document.querySelectorAll('.card').forEach(card => {
@@ -1067,9 +2706,10 @@ function applyFilters() {
     if (show) total++;
   });
 
-  ['sleep','poop'].forEach(sc => {
+  // Hide sections where all cards are filtered out by search
+  allScenes.forEach(sc => {
     const sec = document.getElementById('sec-' + sc);
-    if (!sec.classList.contains('hidden')) {
+    if (sec && !sec.classList.contains('hidden')) {
       const vis = sec.querySelectorAll('.card:not(.hidden)').length;
       if (vis === 0) sec.classList.add('hidden');
     }
